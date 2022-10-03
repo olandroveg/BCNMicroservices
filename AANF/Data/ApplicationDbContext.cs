@@ -36,20 +36,27 @@ namespace AANF.Data
         }
         public class ApplicationDbContextFctory: IDesignTimeDbContextFactory<ApplicationDbContext>
         {
+            //protected readonly IConfiguration Configuration;
+            //public ApplicationDbContextFctory(IConfiguration configuration)
+            //{
+            //    Configuration = configuration;
+            //}
             public ApplicationDbContext CreateDbContext(string[] args)
             {
                 var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-                //optionsBuilder.UseSqlServer("Server=localhost;Database=scrapping; User Id=sa;Password=Cardinals25;MultipleActiveResultSets=true");
-                //string mySqlConnectionStr = configuration.GetConnectionString("DefaultConnection");
-
-                
-
+                //string connectionString;
                 if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-                    optionsBuilder.UseMySql("server = localhost; port = 3306; database = core; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
+                    optionsBuilder.UseMySql("server = localhost; port = 3306; database = MicrosAANF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
                 else
-                    optionsBuilder.UseMySql("server = 192.168.0.18; port = 3306; database = core; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
-                    
-                 return new ApplicationDbContext(optionsBuilder.Options);
+                    optionsBuilder.UseMySql("server = 192.168.0.18; port = 3306; database = MicrosAANF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
+
+                //if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+                //    connectionString = Configuration.GetConnectionString("DefaultConnection");
+                //else
+                //    connectionString = Configuration.GetConnectionString("ProductionConnection");
+                //optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+
+                return new ApplicationDbContext(optionsBuilder.Options);
 
             }
         }

@@ -17,6 +17,24 @@
                 <label asp-for="Input.Email"></label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+            @{ var rolList = new List<string>(new string[]
+                             {
+                        "Administrator",
+                        "bcNode"
+             }); }
+
+            <div class="form-group">
+
+                <label class="text-left">
+                    Roles de usuario
+                </label>
+                <select asp-for="Input.Rol" style="width: 100%;"
+                        asp-items="@(new SelectList(rolList))" class="multi"
+                        required="required" data-val="true"
+                        data-val-required="al menos un rol es obligatorio"></select>
+
+            </div>
+
             <div class="form-floating">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
                 <label asp-for="Input.Password"></label>

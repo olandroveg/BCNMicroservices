@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AANF/Areas/Identity/Pages/Account/Register.cshtml.cs">
+    <Files>
+      <File FileName="AANF/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="103" Column="1" />
+      <File FileName="AANF/Areas/Identity/Pages/Account/Login.cshtml" Line="1" Column="1" />
+      <File FileName="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" Line="1" Column="1" />
+      <File FileName="AANF/Program.cs" Line="35" Column="1" />
+      <File FileName="AANF/Resources/Resources.resx" Line="7" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BCNMicroservices" expanded="True">
+            <Node name="AANF" expanded="True">
+              <Node name="Areas" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
