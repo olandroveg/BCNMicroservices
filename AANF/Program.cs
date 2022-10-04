@@ -2,6 +2,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AANF.Areas.Identity.Data;
 using AANF.Data;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using AANF.Utility;
+
+var secretKey = StaticConfigurationManager.AppSetting["TokenSecret:Key"];
+var secretIssuer = StaticConfigurationManager.AppSetting["TokenSecret:Issuer"];
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 string connectionString;
@@ -20,10 +29,40 @@ else
 
 //tamien puede usarse AddDbContextPool.
 //builder.Services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql("server = localhost; port = 3306; database = core; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30"))));
+builder.Services.AddAntiforgery(opts =>
+{
+    opts.HeaderName = "__RequestVerificationToken";
+});
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql("server = localhost; port = 3306; database = MicrosAANF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30"))));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddAuthentication()
+            .AddCookie(jwt => jwt.SlidingExpiration = true)
+            .AddJwtBearer(jwt =>
+            {
+                var key = Encoding.ASCII.GetBytes(secretKey);
+                jwt.SaveToken = true;
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidIssuer = secretIssuer,
+                    ValidAudience = secretIssuer,
+                    ValidateAudience = true,
+                    ValidateLifetime = true
+                };
+            });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Administrator", policy => policy.RequireClaim(ClaimTypes.Role, "Administrator"));
+    options.AddPolicy("BcNode", policy => policy.RequireClaim(ClaimTypes.Role, "bcNode", "Administrator"));
+});
+
+
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
