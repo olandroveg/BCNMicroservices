@@ -274,3 +274,5 @@
 /Users/subzero/Projects/BCNMicroservices/AANF/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.UI.dll
 /Users/subzero/Projects/BCNMicroservices/AANF/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Embedded.dll
 /Users/subzero/Projects/BCNMicroservices/AANF/obj/Debug/net6.0/AANF.MvcApplicationPartsAssemblyInfo.cs
+/Users/subzero/Projects/BCNMicroservices/AANF/obj/Debug/net6.0/AANF.Resources.Resources.resources
+/Users/subzero/Projects/BCNMicroservices/AANF/obj/Debug/net6.0/AANF.csproj.GenerateResource.cache

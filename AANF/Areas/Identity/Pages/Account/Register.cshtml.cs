@@ -26,18 +26,21 @@ namespace AANF.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IUserStore<IdentityUser> _userStore;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
@@ -97,6 +100,11 @@ namespace AANF.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required]
+            public string Rol { get; set; }
+            public IEnumerable<RolViewModel> RolesViewModel { get; set; }
+            public IEnumerable<Guid> UserRoles { get; set; }
         }
 
 
@@ -123,6 +131,13 @@ namespace AANF.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
+
+                    // Temporalmente se crea un nuevo rol descomentareando abajo. Falta hacerlo con el UI
+
+                    //await _roleManager.CreateAsync(new IdentityRole("bcNode"));
+                    //if (await _roleManager.RoleExistsAsync("bcNode"))
+                    //    await _userManager.AddToRoleAsync(user, Input.Rol);
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -176,5 +191,16 @@ namespace AANF.Areas.Identity.Pages.Account
             }
             return (IUserEmailStore<IdentityUser>)_userStore;
         }
+    }
+    public class RolViewModel
+    {
+        public Guid Id { get; set; }
+        [Required(ErrorMessageResourceName = "NameRequired", ErrorMessageResourceType = typeof(AANF.Resources.Resources))]
+        public string Name { get; set; }
+
+        //public StoreRole ToRol(bool edit = false)
+        //{
+        //    return new StoreRole { Id = edit ? Id.ToString() : null, Name = Name };
+        //}
     }
 }
