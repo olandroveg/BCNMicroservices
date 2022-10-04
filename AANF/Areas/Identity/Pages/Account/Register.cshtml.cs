@@ -137,6 +137,10 @@ namespace AANF.Areas.Identity.Pages.Account
                     //await _roleManager.CreateAsync(new IdentityRole("bcNode"));
                     //if (await _roleManager.RoleExistsAsync("bcNode"))
                     //    await _userManager.AddToRoleAsync(user, Input.Rol);
+                    // or ...
+                    //await _roleManager.CreateAsync(new IdentityRole("administrator"));
+                    //if (await _roleManager.RoleExistsAsync("administrator"))
+                    //    await _userManager.AddToRoleAsync(user, Input.Rol);
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
