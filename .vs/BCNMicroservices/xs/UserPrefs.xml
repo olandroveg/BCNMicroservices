@@ -1,5 +1,13 @@
-﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AANF/appsettings.json">
+﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="118" column="1" />
+    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="137" column="1" />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AANF/Areas/Api/AuthController.cs">
     <Files>
       <File FileName="AANF/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="108" Column="10" />
       <File FileName="AANF/Areas/Identity/Pages/Account/Login.cshtml" Line="12" Column="46" />
@@ -7,7 +15,9 @@
       <File FileName="AANF/Resources/Resources.resx" Line="7" Column="21" />
       <File FileName="AANF/Data/ApplicationDbContext.cs" Line="25" Column="14" />
       <File FileName="AANF/Program.cs" Line="1" Column="1" />
-      <File FileName="AANF/appsettings.json" Line="1" Column="1" />
+      <File FileName="AANF/appsettings.json" Line="8" Column="23" />
+      <File FileName="AANF/Areas/Api/AuthController.cs" Line="9" Column="19" />
+      <File FileName="AANF/Classes/UserToken.cs" Line="9" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +31,6 @@
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Resources" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
@@ -31,14 +40,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="118" column="1" />
-      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="137" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
