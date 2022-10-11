@@ -9,6 +9,6 @@
         public Content Content { get; set; }
         public float Bitrate { get; set; }
         public float Size { get; set; }
-        //public ICollection<TimeSchedule> TimeSchedules { get; set; }
+        public ICollection<TimeSchedule> TimeSchedules { get; set; }
     }
 }
