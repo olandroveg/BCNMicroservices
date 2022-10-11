@@ -7,6 +7,6 @@
         public string SourceLocation { get; set; }
         public ICollection<BcNodeContent> BcNodeContents { get; set; }
         public Guid ServicesId { get; set; }
-        //public ContentServices Services { get; set; }
+        public ContentServices Services { get; set; }
     }
 }
