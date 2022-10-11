@@ -4,17 +4,16 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AANF/Areas/Api/AuthController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Models/Content.cs">
     <Files>
-      <File FileName="AANF/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="108" Column="10" />
-      <File FileName="AANF/Areas/Identity/Pages/Account/Login.cshtml" Line="12" Column="46" />
-      <File FileName="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" Line="98" Column="1" />
-      <File FileName="AANF/Resources/Resources.resx" Line="7" Column="21" />
-      <File FileName="AANF/Data/ApplicationDbContext.cs" Line="25" Column="14" />
-      <File FileName="AANF/Program.cs" Line="1" Column="1" />
-      <File FileName="AANF/appsettings.json" Line="8" Column="23" />
-      <File FileName="AANF/Areas/Api/AuthController.cs" Line="20" Column="48" />
-      <File FileName="AANF/Classes/UserToken.cs" Line="9" Column="1" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="24" Column="10" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="36" Column="1" />
+      <File FileName="UDRF/Models/ContentServices.cs" Line="13" Column="1" />
+      <File FileName="UDRF/Models/TimeSchedule.cs" Line="5" Column="6" />
+      <File FileName="UDRF/Models/RepeatSchedule.cs" Line="13" Column="1" />
+      <File FileName="UDRF/Models/BcNodeContent.cs" Line="13" Column="6" />
+      <File FileName="UDRF/Migrations/20221011203401_AddContentService_TimeSchedule_RepeatSchedule.cs" Line="10" Column="70" />
+      <File FileName="UDRF/Models/Content.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,6 +28,13 @@
               <Node name="Migrations" expanded="True" />
               <Node name="Resources" expanded="True" />
             </Node>
+            <Node name="UDRF" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Content.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -39,5 +45,5 @@
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
