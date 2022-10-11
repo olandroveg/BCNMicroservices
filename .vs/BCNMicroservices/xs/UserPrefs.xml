@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="118" column="1" />
-    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" relfile="AANF/Areas/Identity/Pages/Account/Login.cshtml.cs" line="137" column="1" />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="AANF/Areas/Api/AuthController.cs">
     <Files>
       <File FileName="AANF/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="108" Column="10" />
@@ -16,7 +13,7 @@
       <File FileName="AANF/Data/ApplicationDbContext.cs" Line="25" Column="14" />
       <File FileName="AANF/Program.cs" Line="1" Column="1" />
       <File FileName="AANF/appsettings.json" Line="8" Column="23" />
-      <File FileName="AANF/Areas/Api/AuthController.cs" Line="9" Column="19" />
+      <File FileName="AANF/Areas/Api/AuthController.cs" Line="20" Column="48" />
       <File FileName="AANF/Classes/UserToken.cs" Line="9" Column="1" />
     </Files>
     <Pads>
@@ -40,5 +37,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
 </Properties>
