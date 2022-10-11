@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using UDRF.Models;
 
 namespace UDRF.Data
 {
@@ -21,6 +22,9 @@ namespace UDRF.Data
                 throw;
             }
         }
+        public virtual DbSet<BcNode> BcNode { get; set; }
+        public virtual DbSet<Content> Content { get; set; }
+        public virtual DbSet<BcNodeContent> BcNodeContent { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
