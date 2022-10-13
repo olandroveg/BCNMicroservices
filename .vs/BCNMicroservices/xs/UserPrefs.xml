@@ -6,14 +6,9 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Models/Content.cs">
     <Files>
-      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="24" Column="10" />
-      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="36" Column="1" />
-      <File FileName="UDRF/Models/ContentServices.cs" Line="13" Column="1" />
-      <File FileName="UDRF/Models/TimeSchedule.cs" Line="5" Column="6" />
-      <File FileName="UDRF/Models/RepeatSchedule.cs" Line="13" Column="1" />
       <File FileName="UDRF/Models/BcNodeContent.cs" Line="13" Column="6" />
       <File FileName="UDRF/Migrations/20221011203401_AddContentService_TimeSchedule_RepeatSchedule.cs" Line="10" Column="70" />
-      <File FileName="UDRF/Models/Content.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Models/Content.cs" Line="6" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,9 +26,7 @@
             <Node name="UDRF" expanded="True">
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Content.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
