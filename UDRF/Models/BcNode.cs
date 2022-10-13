@@ -12,7 +12,7 @@
         public bool Ready { get; set; }
         public int Group { get; set; }
         public ICollection<BcNodeContent> BcNodeContents { get; set; }
-        //public ICollection<InterfaceBcNode> InterfaceBcNodes { get; set; }
-        //public ICollection<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
+        public ICollection<InterfaceBcNode> InterfaceBcNodes { get; set; }
+        public ICollection<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
     }
 }

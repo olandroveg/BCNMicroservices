@@ -11,6 +11,8 @@ namespace UDRF.Data
             builder.ToTable("BcNode");
             builder.HasKey(e => e.Id);
             builder.HasMany(e=> e.BcNodeContents).WithOne(e => e.Bcnode).HasForeignKey(e=>e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(e => e.InterfaceBcNodes).WithOne(e => e.BcNode).HasForeignKey(e => e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(e => e.InterfaceBcNodesCoreBcNodes).WithOne(e => e.BcNode).HasForeignKey(e => e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
 
         }
     }
@@ -59,6 +61,41 @@ namespace UDRF.Data
             builder.HasOne(e => e.BcNodeContent).WithMany(e => e.TimeSchedules).HasForeignKey(e => e.BcNodeContentId).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(e => e.RepeatSchedule).WithOne(e => e.TimeSchedule).HasForeignKey(e => e.TimeSchduleId).OnDelete(DeleteBehavior.Cascade);
         }
+    }
+    public class InterfaceBcNodeConfiguration : IEntityTypeConfiguration<InterfaceBcNode>
+    {
+        public void Configure(EntityTypeBuilder<InterfaceBcNode> builder)
+        {
+            builder.ToTable("InterfaceBcNode");
+            builder.HasKey(e => e.Id);
+        }
+    }
+    public class InterfacesConfiguration : IEntityTypeConfiguration<Interfaces>
+    {
+        public void Configure(EntityTypeBuilder<Interfaces> builder)
+        {
+            builder.ToTable("Interfaces");
+            builder.HasKey(e => e.Id);
+            builder.HasMany(e => e.InterfaceBcNodes).WithOne(e => e.Interfaces).HasForeignKey(e => e.InterfaceId).OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+    public class InterfBcNodeCoreConfiguration : IEntityTypeConfiguration<InterfBcNodeCore>
+    {
+        public void Configure(EntityTypeBuilder<InterfBcNodeCore> builder)
+        {
+            builder.ToTable("InterfBcNodeCore");
+            builder.HasKey(e => e.Id);
+            builder.HasMany(e => e.InterfaceBcNodesCoreBcNode).WithOne(e => e.InterfBcNodeCore).HasForeignKey(e => e.InterfBcNodeCoreId).OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+    public class InterfaceBcNodesCoreBcNodeConfiguration : IEntityTypeConfiguration<InterfaceBcNodesCoreBcNode>
+    {
+        public void Configure(EntityTypeBuilder<InterfaceBcNodesCoreBcNode> builder)
+        {
+            builder.ToTable("InterfaceBcNodesCoreBcNode");
+            builder.HasKey(e => e.Id);
+        }
+
     }
 
 }

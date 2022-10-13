@@ -27,6 +27,11 @@ namespace UDRF.Data
         public virtual DbSet<BcNodeContent> BcNodeContent { get; set; }
         public virtual DbSet<TimeSchedule> TimeSchedules { get; set; }
         public virtual DbSet<RepeatSchedule> RepeatSchedules { get; set; }
+        public virtual DbSet<InterfaceBcNode> InterfaceBcNode { get; set; }
+        public virtual DbSet<Interfaces> Interfaces { get; set; }
+        public virtual DbSet<InterfBcNodeCore> InterfBcNodeCores { get; set; }
+        public virtual DbSet<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
