@@ -13,6 +13,7 @@ namespace UDRF.Data
             builder.HasMany(e=> e.BcNodeContents).WithOne(e => e.Bcnode).HasForeignKey(e=>e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(e => e.InterfaceBcNodes).WithOne(e => e.BcNode).HasForeignKey(e => e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(e => e.InterfaceBcNodesCoreBcNodes).WithOne(e => e.BcNode).HasForeignKey(e => e.BcNodeId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(e => e.Place).WithMany(e => e.BcNodes).HasForeignKey(e => e.PlaceId).OnDelete(DeleteBehavior.Cascade);
 
         }
     }
@@ -96,6 +97,15 @@ namespace UDRF.Data
             builder.HasKey(e => e.Id);
         }
 
+    }
+    public class PlaceConfiguration : IEntityTypeConfiguration<Place>
+    {
+        public void Configure(EntityTypeBuilder<Place> builder)
+        {
+            builder.ToTable("Place");
+            builder.HasKey(e => e.Id);
+
+        }
     }
 
 }

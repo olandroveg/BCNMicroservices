@@ -5,7 +5,9 @@
         public Guid Id { get; set; }
         public Guid? TopBcNodeId { get; set; }
         public Guid UserId { get; set; }
+        public Guid PlaceId { get; set; }
         public string Name { get; set; }
+        public Place Place { get; set; }
         public string Description { get; set; }
         public int NumberOfSecondBcNodes { get; set; }
         public ICollection<BcNode> SecondaryBcNodes { get; set; }

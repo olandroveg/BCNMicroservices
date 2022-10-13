@@ -31,6 +31,7 @@ namespace UDRF.Data
         public virtual DbSet<Interfaces> Interfaces { get; set; }
         public virtual DbSet<InterfBcNodeCore> InterfBcNodeCores { get; set; }
         public virtual DbSet<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
+        public virtual DbSet<Place> Place { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
