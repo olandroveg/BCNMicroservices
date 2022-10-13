@@ -1,5 +1,7 @@
 ﻿using System;
+using UDRF.Services.BcNodeContentService;
 using UDRF.Services.BcNodeService;
+using UDRF.Services.ContentService;
 
 namespace UDRF.Utility
 {
@@ -7,8 +9,8 @@ namespace UDRF.Utility
     {
         public static void UseInjection(this IServiceCollection services)
         {
-            //services.AddTransient<ITokenRequestService, TokenRequestService>();
-            //services.AddTransient<ITokenEntityService, TokenEntityService>();
+            services.AddTransient<IContentService, ContentService>();
+            services.AddTransient<IBcNodeContentService, BcNodeContentService>();
             services.AddTransient<IBcNodeService, BcNodeService>();
 
         }

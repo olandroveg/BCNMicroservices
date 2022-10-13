@@ -1,32 +1,30 @@
 ﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Models/Content.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Services/LocationService/LocationService.cs">
     <Files>
-      <File FileName="UDRF/Models/BcNodeContent.cs" Line="13" Column="6" />
-      <File FileName="UDRF/Migrations/20221011203401_AddContentService_TimeSchedule_RepeatSchedule.cs" Line="10" Column="70" />
-      <File FileName="UDRF/Models/Content.cs" Line="6" Column="41" />
+      <File FileName="UDRF/Utility/ServiceCollectionExtension.cs" Line="7" Column="2" />
+      <File FileName="UDRF/Program.cs" Line="18" Column="34" />
+      <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="13" Column="10" />
+      <File FileName="UDRF/Services/BcNodeService/IBcNodeService.cs" Line="8" Column="6" />
+      <File FileName="UDRF/Dto/FilterDto/BaseFilter.cs" Line="14" Column="1" />
+      <File FileName="UDRF/Services/BcNodeContentService/IBcNodeContentService.cs" Line="18" Column="1" />
+      <File FileName="UDRF/Services/BcNodeContentService/BcNodeContentService.cs" Line="16" Column="10" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="20" Column="14" />
+      <File FileName="UDRF/Services/ContentService/IContentService.cs" Line="11" Column="49" />
+      <File FileName="UDRF/Services/ContentService/ContentService.cs" Line="44" Column="1" />
+      <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="16" Column="2" />
+      <File FileName="UDRF/Services/LocationService/LocationService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="AANF" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Api" expanded="True" />
-              </Node>
-              <Node name="Classes" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Resources" expanded="True" />
-            </Node>
             <Node name="UDRF" expanded="True">
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="LocationService" expanded="True" />
+              </Node>
+              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -38,5 +36,10 @@
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

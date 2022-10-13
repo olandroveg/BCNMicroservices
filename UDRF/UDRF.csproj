@@ -20,6 +20,8 @@
     <None Remove="FilterDto\" />
     <None Remove="Dto\FilterDto\" />
     <None Remove="Services\BcNodeContentService\" />
+    <None Remove="Services\ContentService\" />
+    <None Remove="Services\Location\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />
@@ -40,5 +42,7 @@
     <Folder Include="Dto\" />
     <Folder Include="Dto\FilterDto\" />
     <Folder Include="Services\BcNodeContentService\" />
+    <Folder Include="Services\ContentService\" />
+    <Folder Include="Services\LocationService\" />
   </ItemGroup>
 </Project>
