@@ -211,6 +211,273 @@ namespace UDRF.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("UDRF.Models.BcNode", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid?>("BcNodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Group")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("NumberOfSecondBcNodes")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("PlaceId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<bool>("Ready")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid?>("TopBcNodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BcNodeId");
+
+                    b.HasIndex("PlaceId");
+
+                    b.ToTable("BcNode");
+                });
+
+            modelBuilder.Entity("UDRF.Models.BcNodeContent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("BcNodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<float>("Bitrate")
+                        .HasColumnType("float");
+
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<float>("Size")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BcNodeId");
+
+                    b.HasIndex("ContentId");
+
+                    b.ToTable("BcNodeContent");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Content", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<Guid>("ServicesId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("SourceLocation")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServicesId");
+
+                    b.ToTable("Content");
+                });
+
+            modelBuilder.Entity("UDRF.Models.ContentServices", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("RealTime")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContentServices");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfaceBcNode", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("BcNodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("InterfaceId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("InterfacesId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BcNodeId");
+
+                    b.HasIndex("InterfacesId");
+
+                    b.ToTable("InterfaceBcNode");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfaceBcNodesCoreBcNode", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("BcNodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("InterfBcNodeCoreId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BcNodeId");
+
+                    b.HasIndex("InterfBcNodeCoreId");
+
+                    b.ToTable("InterfaceBcNodesCoreBcNodes");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Interfaces", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Interfaces");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfBcNodeCore", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InterfBcNodeCores");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Place", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Latitude")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Longitude")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Place");
+                });
+
+            modelBuilder.Entity("UDRF.Models.RepeatSchedule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid>("TimeSchduleId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("TimeScheduleId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TimeScheduleId");
+
+                    b.ToTable("RepeatSchedules");
+                });
+
+            modelBuilder.Entity("UDRF.Models.TimeSchedule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("BcNodeContentId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<int>("DurationSec")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BcNodeContentId");
+
+                    b.ToTable("TimeSchedules");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -260,6 +527,157 @@ namespace UDRF.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("UDRF.Models.BcNode", b =>
+                {
+                    b.HasOne("UDRF.Models.BcNode", null)
+                        .WithMany("SecondaryBcNodes")
+                        .HasForeignKey("BcNodeId");
+
+                    b.HasOne("UDRF.Models.Place", "Place")
+                        .WithMany("BcNodes")
+                        .HasForeignKey("PlaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Place");
+                });
+
+            modelBuilder.Entity("UDRF.Models.BcNodeContent", b =>
+                {
+                    b.HasOne("UDRF.Models.BcNode", "Bcnode")
+                        .WithMany("BcNodeContents")
+                        .HasForeignKey("BcNodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UDRF.Models.Content", "Content")
+                        .WithMany("BcNodeContents")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bcnode");
+
+                    b.Navigation("Content");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Content", b =>
+                {
+                    b.HasOne("UDRF.Models.ContentServices", "Services")
+                        .WithMany("Contents")
+                        .HasForeignKey("ServicesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Services");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfaceBcNode", b =>
+                {
+                    b.HasOne("UDRF.Models.BcNode", "BcNode")
+                        .WithMany("InterfaceBcNodes")
+                        .HasForeignKey("BcNodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UDRF.Models.Interfaces", "Interfaces")
+                        .WithMany("InterfaceBcNodes")
+                        .HasForeignKey("InterfacesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BcNode");
+
+                    b.Navigation("Interfaces");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfaceBcNodesCoreBcNode", b =>
+                {
+                    b.HasOne("UDRF.Models.BcNode", "BcNode")
+                        .WithMany("InterfaceBcNodesCoreBcNodes")
+                        .HasForeignKey("BcNodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UDRF.Models.InterfBcNodeCore", "InterfBcNodeCore")
+                        .WithMany("InterfaceBcNodesCoreBcNode")
+                        .HasForeignKey("InterfBcNodeCoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BcNode");
+
+                    b.Navigation("InterfBcNodeCore");
+                });
+
+            modelBuilder.Entity("UDRF.Models.RepeatSchedule", b =>
+                {
+                    b.HasOne("UDRF.Models.TimeSchedule", "TimeSchedule")
+                        .WithMany("RepeatSchedule")
+                        .HasForeignKey("TimeScheduleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TimeSchedule");
+                });
+
+            modelBuilder.Entity("UDRF.Models.TimeSchedule", b =>
+                {
+                    b.HasOne("UDRF.Models.BcNodeContent", "BcNodeContent")
+                        .WithMany("TimeSchedules")
+                        .HasForeignKey("BcNodeContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BcNodeContent");
+                });
+
+            modelBuilder.Entity("UDRF.Models.BcNode", b =>
+                {
+                    b.Navigation("BcNodeContents");
+
+                    b.Navigation("InterfaceBcNodes");
+
+                    b.Navigation("InterfaceBcNodesCoreBcNodes");
+
+                    b.Navigation("SecondaryBcNodes");
+                });
+
+            modelBuilder.Entity("UDRF.Models.BcNodeContent", b =>
+                {
+                    b.Navigation("TimeSchedules");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Content", b =>
+                {
+                    b.Navigation("BcNodeContents");
+                });
+
+            modelBuilder.Entity("UDRF.Models.ContentServices", b =>
+                {
+                    b.Navigation("Contents");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Interfaces", b =>
+                {
+                    b.Navigation("InterfaceBcNodes");
+                });
+
+            modelBuilder.Entity("UDRF.Models.InterfBcNodeCore", b =>
+                {
+                    b.Navigation("InterfaceBcNodesCoreBcNode");
+                });
+
+            modelBuilder.Entity("UDRF.Models.Place", b =>
+                {
+                    b.Navigation("BcNodes");
+                });
+
+            modelBuilder.Entity("UDRF.Models.TimeSchedule", b =>
+                {
+                    b.Navigation("RepeatSchedule");
                 });
 #pragma warning restore 612, 618
         }
