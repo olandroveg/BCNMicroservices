@@ -32,11 +32,22 @@ namespace UDRF.Data
         public virtual DbSet<InterfBcNodeCore> InterfBcNodeCores { get; set; }
         public virtual DbSet<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
         public virtual DbSet<Place> Place { get; set; }
+        public virtual DbSet<ContentServices> ContentServices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            builder.ApplyConfiguration(new BcNodeConfiguration());
+            builder.ApplyConfiguration(new BcNodeContentConfiguration());
+            builder.ApplyConfiguration(new ContentConfiguration());
+            builder.ApplyConfiguration(new InterfacesConfiguration());
+            builder.ApplyConfiguration(new ContentServicesConfiguration());
+            builder.ApplyConfiguration(new InterfaceBcNodeConfiguration());
+            builder.ApplyConfiguration(new InterfaceBcNodesCoreBcNodeConfiguration());
+            builder.ApplyConfiguration(new InterfBcNodeCoreConfiguration());
+            builder.ApplyConfiguration(new PlaceConfiguration());
+            builder.ApplyConfiguration(new RepeatScheduleConfiguration());
+            builder.ApplyConfiguration(new TimeScheduleConfiguration());
         }
         public DatabaseFacade GetDatabase()
         {

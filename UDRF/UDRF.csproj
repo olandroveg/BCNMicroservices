@@ -37,9 +37,7 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="Services\BcNodeService\" />
-    <Folder Include="Dto\" />
     <Folder Include="Dto\FilterDto\" />
     <Folder Include="Services\BcNodeContentService\" />
     <Folder Include="Services\ContentService\" />
