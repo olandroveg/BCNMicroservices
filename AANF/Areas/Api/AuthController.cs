@@ -54,7 +54,7 @@ namespace AANF.Areas.Api
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                     new Claim(ClaimTypes.Role, role)
                 }),
-                Expires = DateTime.UtcNow.AddSeconds(20),
+                Expires = DateTime.UtcNow.AddMinutes(10),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Issuer = issuer,
                 Audience = issuer
