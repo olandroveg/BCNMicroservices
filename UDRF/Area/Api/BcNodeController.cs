@@ -14,7 +14,7 @@ namespace UDRF.Area.Api
     [Produces("application/json")]
     [Route("api/[controller]/[action]")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Authorize(Policy = "BcNode")]
+    //[Authorize(Policy = "BcNode")]
     public class BcNodeController : ControllerBase
 
     {
@@ -53,7 +53,6 @@ namespace UDRF.Area.Api
             return Ok(result.ToString());
         }
         [HttpPost]
-        [AllowAnonymous]
         public IActionResult LoadBcNodes ([FromBody] BaseFilter filters)
         {
             
