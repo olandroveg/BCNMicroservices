@@ -39,8 +39,10 @@ namespace AANF.Areas.Api
         private async Task<dynamic> GenerateToken(string username)
         {
             var user = await _userManager.FindByEmailAsync(username);
-            var role = _context.Roles.Where(x => x.Id == _context.UserRoles.Where(e => e.UserId == user.Id).Select(e => e.RoleId).FirstOrDefault()).FirstOrDefault().Name;
-
+            //abajo otra manera de extraer el rol por querys. Funciona tambien. Solo que uso el metodo ya definido: userManager.GetRolesAsync(user)
+            //var role = _context.Roles.Where(x => x.Id == _context.UserRoles.Where(e => e.UserId == user.Id).Select(e => e.RoleId).FirstOrDefault()).FirstOrDefault().Name;
+            var roles = await _userManager.GetRolesAsync(user);
+            var role = roles.FirstOrDefault();
             var jwtTokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(StaticConfigurationManager.AppSetting["TokenSecret:Key"]);
             var issuer =StaticConfigurationManager.AppSetting["TokenSecret:Issuer"];
@@ -54,14 +56,14 @@ namespace AANF.Areas.Api
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                     new Claim(ClaimTypes.Role, role)
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(10),
+                Expires = DateTime.UtcNow.AddMinutes(30),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Issuer = issuer,
                 Audience = issuer
             };
             var token = jwtTokenHandler.CreateToken(tokenDescriptor);
             var jwToken = jwtTokenHandler.WriteToken(token);
-            return string.IsNullOrEmpty(jwToken) ? new JwtAuthResponse { Token = "", Status = "Unsuccess" } : new JwtAuthResponse { Token = jwToken, Status = "Success", UserName = username };
+            return string.IsNullOrEmpty(jwToken) ? new JwtAuthResponse { Token = "", Status = "Unsuccess" } : new JwtAuthResponse { Token = jwToken, Status = "Success", UserName = username, BcnUserId = Guid.Parse(user.Id) };
 
 
         }
