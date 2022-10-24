@@ -1,30 +1,34 @@
-﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Services/LocationService/LocationService.cs">
+﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/BcNodeController.cs">
     <Files>
-      <File FileName="UDRF/Utility/ServiceCollectionExtension.cs" Line="7" Column="2" />
-      <File FileName="UDRF/Program.cs" Line="18" Column="34" />
-      <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="13" Column="10" />
-      <File FileName="UDRF/Services/BcNodeService/IBcNodeService.cs" Line="8" Column="6" />
-      <File FileName="UDRF/Dto/FilterDto/BaseFilter.cs" Line="14" Column="1" />
-      <File FileName="UDRF/Services/BcNodeContentService/IBcNodeContentService.cs" Line="18" Column="1" />
-      <File FileName="UDRF/Services/BcNodeContentService/BcNodeContentService.cs" Line="16" Column="10" />
-      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="1" Column="1" />
-      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="20" Column="14" />
-      <File FileName="UDRF/Services/ContentService/IContentService.cs" Line="11" Column="49" />
-      <File FileName="UDRF/Services/ContentService/ContentService.cs" Line="44" Column="1" />
-      <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="16" Column="2" />
-      <File FileName="UDRF/Services/LocationService/LocationService.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Dto/FilterDto/BaseFilter.cs" Line="10" Column="42" />
+      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="67" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
+            <Node name="AANF" expanded="True" selected="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Api" expanded="True" />
+              </Node>
+              <Node name="Classes" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
             <Node name="UDRF" expanded="True">
+              <Node name="Area" expanded="True">
+                <Node name="Api" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="Dto" expanded="True">
+                <Node name="FilterDto" expanded="True" />
+              </Node>
               <Node name="Services" expanded="True">
+                <Node name="ContentService" expanded="True" />
                 <Node name="LocationService" expanded="True" />
               </Node>
-              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -34,12 +38,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -35,13 +35,14 @@ builder.Services.AddAuthentication()
                     ValidAudience = secretIssuer,
                     ValidateAudience = true,
                     ValidateLifetime = true
+                    
                 };
             });
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("Administrator", policy => policy.RequireClaim(ClaimTypes.Role, "Administrator"));
-    options.AddPolicy("BcNode", policy => policy.RequireClaim(ClaimTypes.Role, "bcNode", "Administrator"));
-});
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("Administrator", policy => policy.RequireClaim(ClaimTypes.Role, "Administrator"));
+//    options.AddPolicy("BcNode", policy => policy.RequireClaim(ClaimTypes.Role, "bcNode", "Administrator"));
+//});
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
