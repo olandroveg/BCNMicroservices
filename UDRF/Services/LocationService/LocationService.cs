@@ -1,6 +1,7 @@
 ﻿using System;
 using UDRF.Data;
 using UDRF.Dto.FilterDto;
+using UDRF.Dto.LocationDto;
 using UDRF.Models;
 
 namespace UDRF.Services.LocationService
@@ -19,9 +20,13 @@ namespace UDRF.Services.LocationService
             return location;
 
         }
-        public IEnumerable<Place> GetAllLocations()
+        public IEnumerable<LocationListDto> GetAllLocations()
         {
-            return _context.Place.AsEnumerable();
+            return _context.Place.Select(x => new LocationListDto
+            {
+                Id = x.Id,
+                Location = x.Location
+            }).ToList();
         }
         public async Task<Guid> AddOrUpdate(Place location)
         {

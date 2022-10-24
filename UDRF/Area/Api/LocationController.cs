@@ -52,5 +52,12 @@ namespace UDRF.Area.Api
             
             
         }
+        [HttpPost]
+        public IActionResult LoadSingleLocation (Guid locationId)
+        {
+            if (locationId == Guid.Empty)
+                return BadRequest("bcNode Id empty");
+        }
+
     }
 }

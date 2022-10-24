@@ -77,5 +77,13 @@ namespace UDRF.Area.Api
             return Ok( _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetAllBcNodes()).ToList() );
 
         }
+        [HttpPost]
+        public IActionResult GetBcNode (Guid bcNodeId)
+        {
+            if (bcNodeId == Guid.Empty)
+                return BadRequest("bcNode Id empty");
+            var data = _bcNodeAdapter.ConvertBcNodeToDTO(_bcNodeService.GeBcNode(bcNodeId));
+            return Ok(data);
+        }
     }
 }
