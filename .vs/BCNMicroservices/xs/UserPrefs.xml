@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/BcNodeController.cs">
     <Files>
-      <File FileName="UDRF/Dto/FilterDto/BaseFilter.cs" Line="10" Column="42" />
-      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="67" Column="6" />
+      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="61" Column="105" />
+      <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="AANF" expanded="True" selected="True">
+            <Node name="AANF" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Api" expanded="True" />
               </Node>
@@ -18,7 +18,9 @@
             </Node>
             <Node name="UDRF" expanded="True">
               <Node name="Area" expanded="True">
-                <Node name="Api" expanded="True" />
+                <Node name="Api" expanded="True">
+                  <Node name="BcNodeController.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
@@ -26,6 +28,7 @@
                 <Node name="FilterDto" expanded="True" />
               </Node>
               <Node name="Services" expanded="True">
+                <Node name="BcNodeService" expanded="True" />
                 <Node name="ContentService" expanded="True" />
                 <Node name="LocationService" expanded="True" />
               </Node>
@@ -38,7 +41,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
