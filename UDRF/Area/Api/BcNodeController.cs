@@ -56,11 +56,25 @@ namespace UDRF.Area.Api
         public IActionResult LoadBcNodes ([FromBody] BaseFilter filters)
         {
             
-            var data = new List<BcNodeDto>();
-            if (filters != null)
-                data = _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetBcNodes(filters)).ToList();
-                
-            return Ok(data);
+            try 
+            {
+                if (filters == null)
+                    throw new ArgumentNullException(nameof(filters));
+                var data = _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetBcNodes(filters)).ToList();
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
+
+        }
+        [HttpGet]
+        public IActionResult LoadAllBcNodes()
+        {
+            return Ok( _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetAllBcNodes()).ToList() );
 
         }
     }
