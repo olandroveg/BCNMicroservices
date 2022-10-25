@@ -20,13 +20,17 @@ namespace UDRF.Services.LocationService
             return location;
 
         }
-        public IEnumerable<LocationListDto> GetAllLocations()
+        //public IEnumerable<LocationListDto> GetAllLocations()
+        //{
+        //    return _context.Place.Select(x => new LocationListDto
+        //    {
+        //        Id = x.Id,
+        //        Location = x.Location
+        //    }).ToList();
+        //}
+        public IEnumerable<Place> GetAllLocations()
         {
-            return _context.Place.Select(x => new LocationListDto
-            {
-                Id = x.Id,
-                Location = x.Location
-            }).ToList();
+            return _context.Place.ToList();
         }
         public async Task<Guid> AddOrUpdate(Place location)
         {

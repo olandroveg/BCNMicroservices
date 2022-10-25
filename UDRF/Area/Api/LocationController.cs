@@ -2,6 +2,7 @@
 using System.Text.Json;
 using UDRF.Adapters.LocationAdapter;
 using UDRF.Dto.FilterDto;
+using UDRF.Dto.LocationDto;
 using UDRF.Services.LocationService;
 
 namespace UDRF.Area.Api
@@ -42,7 +43,7 @@ namespace UDRF.Area.Api
         {
             try
             {
-                var data = _locationAdapter.ConvertLocationsToDTOs(_locationService.GetAllLocations());
+                var data = _locationAdapter.ConvertListDto(_locationService.GetAllLocations());
                 return Ok(data);
             }
             catch (Exception ex)
@@ -56,7 +57,28 @@ namespace UDRF.Area.Api
         public IActionResult LoadSingleLocation (Guid locationId)
         {
             if (locationId == Guid.Empty)
-                return BadRequest("bcNode Id empty");
+                return BadRequest("location Id empty");
+            var data = _locationAdapter.ConvertLocationToDTO(_locationService.GetLocation(locationId));
+            return Ok(data);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ReceiveLocation(LocationDto locationDto)
+        {
+            var locationId = await _locationService.AddOrUpdate(_locationAdapter.ConvertDtoToLocation(locationDto));
+            return Ok(locationId);
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteRange(IEnumerable<Guid> locations)
+        {
+            try
+            {
+                await _locationService.DeleteRange(locations);
+                return Ok();
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
         }
 
     }
