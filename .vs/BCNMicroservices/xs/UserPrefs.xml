@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/LocationController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/ContentController.cs">
     <Files>
       <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="84" Column="17" />
       <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="1" Column="1" />
       <File FileName="UDRF/Services/LocationService/LocationService.cs" Line="23" Column="62" />
       <File FileName="UDRF/Models/Place.cs" Line="4" Column="18" />
-      <File FileName="UDRF/Area/Api/LocationController.cs" Line="41" Column="48" />
+      <File FileName="UDRF/Area/Api/ContentController.cs" Line="67" Column="106" />
+      <File FileName="UDRF/Area/Api/LocationController.cs" Line="67" Column="10" />
       <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -37,11 +38,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
