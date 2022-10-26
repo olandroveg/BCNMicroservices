@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using UDRF.Adapters.LocationAdapter;
 using UDRF.Dto.FilterDto;
@@ -7,7 +9,9 @@ using UDRF.Services.LocationService;
 
 namespace UDRF.Area.Api
 {
-    [Area("Admin")] 
+    [Produces("application/json")]
+    [Route("api/[controller]/[action]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class LocationController : Controller
     {
         private readonly ILocationService _locationService;
@@ -54,7 +58,7 @@ namespace UDRF.Area.Api
             
         }
         [HttpPost]
-        public IActionResult LoadSingleLocation (Guid locationId)
+        public IActionResult LoadSingleLocation ([FromBody] Guid locationId)
         {
             if (locationId == Guid.Empty)
                 return BadRequest("location Id empty");
@@ -62,13 +66,13 @@ namespace UDRF.Area.Api
             return Ok(data);
         }
         [HttpPost]
-        public async Task<IActionResult> ReceiveLocation(LocationDto locationDto)
+        public async Task<IActionResult> ReceiveLocation([FromBody] LocationDto locationDto)
         {
             var locationId = await _locationService.AddOrUpdate(_locationAdapter.ConvertDtoToLocation(locationDto));
             return Ok(locationId);
         }
         [HttpPost]
-        public async Task<IActionResult> DeleteRange(IEnumerable<Guid> locations)
+        public async Task<IActionResult> DeleteRange([FromBody] IEnumerable<Guid> locations)
         {
             try
             {
