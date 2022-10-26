@@ -16,6 +16,7 @@ else
     connectionString = builder.Configuration.GetConnectionString("ProductionConnection") ?? throw new InvalidOperationException("Connection string 'ProductionConnection' not found.");
 
 // Add services to the container.
+builder.Services.UseInjection();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql("server = localhost; port = 3306; database = MicrosUDRF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30"))));
 
@@ -34,13 +35,14 @@ builder.Services.AddAuthentication()
                     ValidAudience = secretIssuer,
                     ValidateAudience = true,
                     ValidateLifetime = true
+                    
                 };
             });
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("Administrator", policy => policy.RequireClaim(ClaimTypes.Role, "Administrator"));
-    options.AddPolicy("BcNode", policy => policy.RequireClaim(ClaimTypes.Role, "bcNode", "Administrator"));
-});
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("Administrator", policy => policy.RequireClaim(ClaimTypes.Role, "Administrator"));
+//    options.AddPolicy("BcNode", policy => policy.RequireClaim(ClaimTypes.Role, "bcNode", "Administrator"));
+//});
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();

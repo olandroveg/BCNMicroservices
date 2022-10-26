@@ -1,32 +1,33 @@
-﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Models/Content.cs">
+﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/LocationController.cs">
     <Files>
-      <File FileName="UDRF/Models/BcNodeContent.cs" Line="13" Column="6" />
-      <File FileName="UDRF/Migrations/20221011203401_AddContentService_TimeSchedule_RepeatSchedule.cs" Line="10" Column="70" />
-      <File FileName="UDRF/Models/Content.cs" Line="6" Column="41" />
+      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="84" Column="17" />
+      <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Services/LocationService/LocationService.cs" Line="23" Column="62" />
+      <File FileName="UDRF/Models/Place.cs" Line="4" Column="18" />
+      <File FileName="UDRF/Area/Api/LocationController.cs" Line="41" Column="48" />
+      <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="AANF" expanded="True">
-              <Node name="Areas" expanded="True">
+            <Node name="UDRF" expanded="True">
+              <Node name="Area" expanded="True">
                 <Node name="Api" expanded="True" />
               </Node>
-              <Node name="Classes" expanded="True" />
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Resources" expanded="True" />
-            </Node>
-            <Node name="UDRF" expanded="True">
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
+              <Node name="Dto" expanded="True">
+                <Node name="FilterDto" expanded="True" />
+                <Node name="LocationDto" expanded="True" />
+              </Node>
               <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="BcNodeService" expanded="True" />
+                <Node name="ContentService" expanded="True" />
+                <Node name="LocationService" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -37,6 +38,11 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
