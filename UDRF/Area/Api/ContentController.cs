@@ -45,5 +45,27 @@ namespace UDRF.Area.Api
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet]
+        public IActionResult GetAllServices()
+        {
+            try
+            {
+                var services = _servicesAdapter.ConvertServiceToDto(_servicesService.GetServices());
+                
+                return Ok(services);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPost]
+        public IActionResult LoadSingleContent([FromBody] Guid contentId)
+        {
+            if (contentId == Guid.Empty)
+                return BadRequest("content Id empty");
+            var contentDto = _contentAdapter.ConvertContentToDto(_contentService.GetContentById(contentId));
+            return Ok(data);
+        }
     }
 }
