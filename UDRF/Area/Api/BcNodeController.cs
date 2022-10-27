@@ -83,7 +83,7 @@ namespace UDRF.Area.Api
 
         }
         [HttpPost]
-        public IActionResult GetBcNode (Guid bcNodeId)
+        public IActionResult GetBcNode ([FromBody] Guid bcNodeId)
         {
             if (bcNodeId == Guid.Empty)
                 return BadRequest("bcNode Id empty");
@@ -98,6 +98,23 @@ namespace UDRF.Area.Api
             }
              
             return Ok(data);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ReceiveBcNode([FromBody] BcNodeDto bcNodeDto)
+        {
+            try
+            {
+                if (bcNodeDto == null)
+                    throw new ArgumentNullException(nameof(bcNodeDto));
+                var bcNodeId = Guid.Empty;
+                bcNodeId = await _bcNodeService.AddOrUpdate(_bcNodeAdapter.ConvertDtoToBcNode(bcNodeDto));
+                return Ok(bcNodeId);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
     }
 }
