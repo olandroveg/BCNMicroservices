@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UDRF.Adapters.ContentAdapter;
 using UDRF.Adapters.ServicesAdapter;
+using UDRF.Dto.ContentDto;
 using UDRF.Services.ContentService;
 using UDRF.Services.ServicesService;
 
@@ -65,7 +66,36 @@ namespace UDRF.Area.Api
             if (contentId == Guid.Empty)
                 return BadRequest("content Id empty");
             var contentDto = _contentAdapter.ConvertContentToDto(_contentService.GetContentById(contentId));
-            return Ok(data);
+            return Ok(contentDto);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ReceiveContent([FromBody] ContentDto contentDto)
+        {
+            try
+            {
+                if (contentDto == null)
+                    throw new ArgumentNullException(nameof(contentDto));
+                var contentId = await _contentService.AddOrUpdate(_contentAdapter.ConvertDtoToContent(contentDto));
+                return Ok(contentId);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteRange([FromBody] IEnumerable<Guid> contentIds)
+        {
+            try
+            {
+                await _contentService.DeleteRange(contentIds);
+                return Ok();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

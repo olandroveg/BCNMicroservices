@@ -60,7 +60,12 @@ namespace UDRF.Area.Api
             {
                 if (filters == null)
                     throw new ArgumentNullException(nameof(filters));
-                var data = _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetBcNodes(filters)).ToList();
+
+                var data = new List<BcNodeDto>();
+                if (filters.IsAdmin)
+                    data = _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetAllBcNodes()).ToList();
+                else
+                    data = _bcNodeAdapter.ConvertBcNodesToDTOs(_bcNodeService.GetBcNodes(filters)).ToList();
 
                 return Ok(data);
             }
@@ -82,7 +87,16 @@ namespace UDRF.Area.Api
         {
             if (bcNodeId == Guid.Empty)
                 return BadRequest("bcNode Id empty");
-            var data = _bcNodeAdapter.ConvertBcNodeToDTO(_bcNodeService.GeBcNode(bcNodeId));
+            var data = new BcNodeDto();
+            try
+            {
+                data = _bcNodeAdapter.ConvertBcNodeToDTO(_bcNodeService.GeBcNode(bcNodeId));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+             
             return Ok(data);
         }
     }
