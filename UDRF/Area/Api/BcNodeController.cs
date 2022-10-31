@@ -210,5 +210,31 @@ namespace UDRF.Area.Api
 
 
         }
+        [HttpPost]
+        public async Task<IActionResult> DeleteRangeBcNodeContents([FromBody] IEnumerable<Guid> bcnodeContentsIds)
+        {
+            try
+            {
+                await _bcNodeContentService.DeleteRange(bcnodeContentsIds);
+                return Ok();
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteRange([FromBody] IEnumerable<Guid> bcnodesIds)
+        {
+            try
+            {
+                await _bcNodeService.DeleteRange(bcnodesIds);
+                return Ok();
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
+        }
     }
 }
