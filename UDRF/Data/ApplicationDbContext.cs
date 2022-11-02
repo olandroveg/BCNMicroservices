@@ -35,6 +35,7 @@ namespace UDRF.Data
         public virtual DbSet<ContentServices> ContentServices { get; set; }
         public virtual DbSet<APImapping> APImapping { get; set; }
         public virtual DbSet<NFmapping> NFmapping { get; set; }
+        public virtual DbSet<Token> Token { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -52,6 +53,7 @@ namespace UDRF.Data
             builder.ApplyConfiguration(new TimeScheduleConfiguration());
             builder.ApplyConfiguration(new APImappingConfiguration());
             builder.ApplyConfiguration(new NFmappingConfiguration());
+            builder.ApplyConfiguration(new TokenConfiguration());
         }
         public DatabaseFacade GetDatabase()
         {

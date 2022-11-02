@@ -126,5 +126,14 @@ namespace UDRF.Data
 
         }
     }
+    public class TokenConfiguration : IEntityTypeConfiguration<Token>
+    {
+        public void Configure(EntityTypeBuilder<Token> builder)
+        {
+            builder.ToTable("Token");
+            builder.HasKey(e => e.Id);
+
+        }
+    }
 
 }
