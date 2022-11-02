@@ -135,5 +135,14 @@ namespace UDRF.Data
 
         }
     }
+    public class IDinNRFConfiguration : IEntityTypeConfiguration<IDinNRF>
+    {
+        public void Configure(EntityTypeBuilder<IDinNRF> builder)
+        {
+            builder.ToTable("IDinNRF");
+            builder.HasKey(e => e.Id);
+
+        }
+    }
 
 }
