@@ -1,7 +1,9 @@
-﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Data/EntittiesConfiguration.cs">
     <Files>
       <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="239" Column="6" />
       <File FileName="UDRF/Area/Api/LocationController.cs" Line="86" Column="10" />
@@ -12,16 +14,14 @@
       <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="1" Column="1" />
       <File FileName="UDRF/Program.cs" Line="1" Column="1" />
       <File FileName="UDRF/Controllers/HomeController.cs" Line="18" Column="9" />
-      <File FileName="UDRF/appsettings.json" Line="17" Column="1" />
+      <File FileName="UDRF/appsettings.json" Line="14" Column="31" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="UDRF" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
-            </Node>
+            <Node name="UDRF" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -30,10 +30,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
