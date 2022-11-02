@@ -1,24 +1,34 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Services/TokenService/ITokenRequestService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Data/ApplicationDbContext.cs">
     <Files>
-      <File FileName="UDRF/Services/TokenService/ITokenRequestService.cs" Line="11" Column="1" />
       <File FileName="UDRF/Services/TokenService/TokenRequestService.cs" Line="8" Column="41" />
+      <File FileName="UDRF/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="16" Column="24" />
+      <File FileName="UDRF/Services/NRFService/INRFService.cs" Line="7" Column="1" />
+      <File FileName="UDRF/Dto/NRFDto/IncomeNFDto.cs" Line="14" Column="1" />
+      <File FileName="UDRF/appsettings.json" Line="21" Column="6" />
+      <File FileName="UDRF/Models/IDinNRF.cs" Line="10" Column="1" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="146" Column="6" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="63" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="AANF" expanded="True">
-              <Node name="Classes" expanded="True" />
-            </Node>
             <Node name="UDRF" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="Dto" expanded="True">
+                <Node name="NRFDto" expanded="True" />
+              </Node>
               <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True">
+                <Node name="NRFService" expanded="True" />
                 <Node name="TokenService" expanded="True" />
               </Node>
+              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -32,5 +42,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
