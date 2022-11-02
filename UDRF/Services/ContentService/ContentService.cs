@@ -15,6 +15,7 @@ namespace UDRF.Services.ContentService
         public IEnumerable<Content> GetAllContents()
         {
             return _context.Content.Include(x => x.Services);
+            
         }
         public async Task<Guid> AddOrUpdate(Content content)
         {
