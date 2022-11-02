@@ -15,16 +15,15 @@
       <File FileName="UDRF/Program.cs" Line="1" Column="1" />
       <File FileName="UDRF/Controllers/HomeController.cs" Line="18" Column="9" />
       <File FileName="UDRF/appsettings.json" Line="17" Column="1" />
-      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="113" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
             <Node name="UDRF" expanded="True">
-              <Node name="Data" expanded="True">
-                <Node name="EntittiesConfiguration.cs" selected="True" />
-              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
             </Node>
           </Node>
         </State>
