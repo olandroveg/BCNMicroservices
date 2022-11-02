@@ -9,6 +9,7 @@ using UDRF.Services.BcNodeService;
 using UDRF.Services.ContentService;
 using UDRF.Services.LocationService;
 using UDRF.Services.ServicesService;
+using UDRF.Services.TokenService;
 
 namespace UDRF.Utility
 {
@@ -21,11 +22,16 @@ namespace UDRF.Utility
             services.AddTransient<ILocationService, LocationService>();
             services.AddTransient<IBcNodeService, BcNodeService>();
             services.AddTransient<IBcNodeContentService, BcNodeContentService>();
+            services.AddTransient<ITokenEntityService, TokenEntityService>();
+            services.AddTransient<ITokenRequestService, TokenRequestService>();
             services.AddTransient<ILocationAdapter, LocationAdapter>();
             services.AddTransient<IBcNodeAdapter, BcNodeAdapter>();
             services.AddTransient<IBcNodeContentAdapter, BcNodeContentAdapter>();
             services.AddTransient<IContentAdapter, ContentAdapter>();
             services.AddTransient<IServicesAdapter, ServicesAdapter>();
+
+            
+
 
 
         }
