@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using UDRF.Models;
+using UDRF.Services.IdNRFService;
+using UDRF.Services.NRFService;
 using UDRF.Services.TokenService;
 using UDRF.Utility;
 
@@ -10,11 +12,16 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly ITokenRequestService _tokenService;
+    private readonly INRFService _nRFService;
+    private readonly IIdNRFService _idNRFService;
 
-    public HomeController(ILogger<HomeController> logger, ITokenRequestService tokenService)
+    public HomeController(ILogger<HomeController> logger, ITokenRequestService tokenService,
+        INRFService nRFService, IIdNRFService idNRFService)
     {
         _logger = logger;
         _tokenService = tokenService;
+        _nRFService = nRFService;
+        _idNRFService = idNRFService;
     }
 
     private async Task<string> GetToken()
@@ -29,10 +36,8 @@ public class HomeController : Controller
     public async Task< IActionResult> Index()
     {
         var token = await GetToken();
-
-        //var api1Name = StaticConfigurationManager.AppSetting["PublicApi:api1:name"];
-        //var api1Desc = StaticConfigurationManager.AppSetting["PublicApi:api1:descrip"];
-        //var api1Add = StaticConfigurationManager.AppSetting["PublicApi:api1:address"];
+        var incomeNF = _nRFService.ConformNFDto();
+        var nfId = await _nRFService.RegisterNF(token, incomeNF);
 
         return View();
     }

@@ -2,6 +2,7 @@
 using System.Text;
 using UDRF.Adapters.LocationAdapter;
 using UDRF.Dto.NRFDto;
+using UDRF.Services.IdNRFService;
 using UDRF.Services.TokenService;
 using UDRF.Utility;
 
@@ -12,13 +13,15 @@ namespace UDRF.Services.NRFService
         private readonly string _nrfAddress;
         private readonly string _register;
         private readonly ILocationAdapter _locationAdapter;
+        private readonly IIdNRFService _idNRFService;
 
-        public NRFService(ILocationAdapter locationAdapter)
+        public NRFService(ILocationAdapter locationAdapter, IIdNRFService idNRFService)
         {
             
             _nrfAddress = StaticConfigurationManager.AppSetting["ApiAddress:NRF_Address"];
             _register = StaticConfigurationManager.AppSetting["ApiAddress:NRF_registerNF"];
             _locationAdapter = locationAdapter;
+            _idNRFService = idNRFService;
         }
         public async Task<Guid> RegisterNF(string token, IncomeNFDto incomeNFDto)
         {
@@ -45,11 +48,49 @@ namespace UDRF.Services.NRFService
                 throw new Exception(e.Message);
             }
         }
-        //public IncomeNFDto ConformNFDto()
-        //{
+        public IncomeNFDto ConformNFDto()
+        {
+            var nfId = _idNRFService.GetNF_IDinNRF();
+            var nfName = StaticConfigurationManager.AppSetting["PublicNRF:Name"];
+            var nfVersion = StaticConfigurationManager.AppSetting["PublicNRF:Version"];
+            var nfBusyIndex = StaticConfigurationManager.AppSetting["PublicNRF:BusyIndex"];
+            var nfState = StaticConfigurationManager.AppSetting["PublicNRF:state"];
+            var nfSuscriptionApi = StaticConfigurationManager.AppSetting["PublicNRF:SuscriptionApi"];
+            var numberOfApi = StaticConfigurationManager.AppSetting["PublicNRF:NumberOfApis"];
+            var nfLocationName = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Name"];
+            var nfLatitude = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Latitude"];
+            var nfLongitude = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Longitude"];
+            var location = new IncomeLocationDto
+            {
+                Name = nfLocationName,
+                Latitude = double.Parse(nfLatitude),
+                Longitude = double.Parse(nfLongitude)
+            };
+            var services = new List<IncomeServiceDto>();
+            for (int i = 1; i < (int.Parse(numberOfApi)+1); i++)
+            {
+                services.Add(new IncomeServiceDto
+                {
+                    Name = StaticConfigurationManager.AppSetting["PublicNRF:API_" + i.ToString() + ":Name"],
+                    Description = StaticConfigurationManager.AppSetting["PublicNRF:API_" + i.ToString() + ":Descrip"],
+                    ServiceAPI = StaticConfigurationManager.AppSetting["PublicNRF:API_" + i.ToString() + ":Address"],
+                    NfBaseAddress = StaticConfigurationManager.AppSetting["PublicNRF:NFbaseAddress"]
+                });
+            }
+            return new IncomeNFDto
+            {
+                Id = nfId.ToString(),
+                Name = nfName,
+                Version = nfVersion,
+                Location = location,
+                Services = services,
+                BusyIndex = float.Parse(nfBusyIndex),
+                state = nfState,
+                SuscriptionApi = nfSuscriptionApi
+            };
+            
+        }
 
-        //}
-    
 
 
     }

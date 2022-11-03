@@ -11,9 +11,10 @@ namespace UDRF.Services.IdNRFService
         {
             _context = context;
         }
-        public IDinNRF GetNF_IDinNRF()
+        public Guid GetNF_IDinNRF()
         {
-            return _context.IDinNRF.FirstOrDefault();  
+            var idInNRF = _context.IDinNRF;
+            return idInNRF != null && idInNRF.Count() > 0 ? (Guid) idInNRF.FirstOrDefault().Id : Guid.Empty;
         }
         public async Task<Guid> AddOrUpdate(IDinNRF idInNRF)
         {
