@@ -60,6 +60,7 @@ namespace UDRF.Services.NRFService
             var nfLocationName = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Name"];
             var nfLatitude = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Latitude"];
             var nfLongitude = StaticConfigurationManager.AppSetting["PublicNRF:NFLocation:Longitude"];
+            
             var location = new IncomeLocationDto
             {
                 Name = nfLocationName,

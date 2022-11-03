@@ -1,18 +1,20 @@
-﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
+﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Data/ApplicationDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Controllers/HomeController.cs">
     <Files>
       <File FileName="UDRF/Services/TokenService/TokenRequestService.cs" Line="8" Column="41" />
-      <File FileName="UDRF/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="58" Column="35" />
+      <File FileName="UDRF/Controllers/HomeController.cs" Line="33" Column="84" />
+      <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="63" Column="13" />
       <File FileName="UDRF/Services/NRFService/INRFService.cs" Line="11" Column="1" />
       <File FileName="UDRF/Dto/NRFDto/IncomeNFDto.cs" Line="15" Column="1" />
-      <File FileName="UDRF/appsettings.json" Line="21" Column="6" />
+      <File FileName="UDRF/appsettings.json" Line="47" Column="7" />
       <File FileName="UDRF/Models/IDinNRF.cs" Line="10" Column="1" />
       <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="146" Column="6" />
-      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="60" Column="44" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="55" Column="71" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
