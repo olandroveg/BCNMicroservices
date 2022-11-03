@@ -1,4 +1,5 @@
 ﻿using UDRF.Dto.LocationDto;
+using UDRF.Dto.NRFDto;
 using UDRF.Models;
 
 namespace UDRF.Adapters.LocationAdapter
@@ -9,5 +10,6 @@ namespace UDRF.Adapters.LocationAdapter
         public Place ConvertDtoToLocation(LocationDto locationDto);
         public LocationDto ConvertLocationToDTO(Place location);
         public IEnumerable<LocationListDto> ConvertListDto(IEnumerable<Place> places);
+        public IncomeLocationDto ConvertToIncomeLocationDto(Place location);
     }
 }

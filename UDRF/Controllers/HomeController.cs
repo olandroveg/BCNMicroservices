@@ -29,6 +29,11 @@ public class HomeController : Controller
     public async Task< IActionResult> Index()
     {
         var token = await GetToken();
+
+        //var api1Name = StaticConfigurationManager.AppSetting["PublicApi:api1:name"];
+        //var api1Desc = StaticConfigurationManager.AppSetting["PublicApi:api1:descrip"];
+        //var api1Add = StaticConfigurationManager.AppSetting["PublicApi:api1:address"];
+
         return View();
     }
 
