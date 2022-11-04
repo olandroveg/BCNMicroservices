@@ -11,19 +11,42 @@ namespace UDRF.Services.IdNRFService
         {
             _context = context;
         }
-        public Guid GetNF_IDinNRF()
+        public IDinNRF GetNF_IDinNRF()
         {
             var idInNRF = _context.IDinNRF;
-            return idInNRF != null && idInNRF.Count() > 0 ? (Guid) idInNRF.FirstOrDefault().Id : Guid.Empty;
+            return idInNRF != null && idInNRF.Count() > 0 ? idInNRF.FirstOrDefault() : new IDinNRF { Id = Guid.Empty};
         }
         public async Task<Guid> AddOrUpdate(IDinNRF idInNRF)
         {
+            //if (idInNRF == null)
+            //    throw new ArgumentNullException(nameof(idInNRF));
+            //var nfIdInNRF = GetNF_IDinNRF();
+            //if (idInNRF.Id != Guid.Empty && nfIdInNRF.Id != Guid.Empty && nfIdInNRF.Id == idInNRF.Id)
+            //{
+            //    _context.IDinNRF.Remove(nfIdInNRF);
+            //    await _context.IDinNRF.AddAsync(idInNRF);
+            //}
+
+            //else
+            //{
+            //    if (nfIdInNRF.Id != Guid.Empty)
+            //        _context.IDinNRF.Remove(nfIdInNRF);
+            //    if(idInNRF.Id != Guid.Empty)
+            //        await _context.IDinNRF.AddAsync(idInNRF);
+            //}
+            //await _context.SaveChangesAsync();
+            //return idInNRF.Id ?? Guid.Empty;
+
             if (idInNRF == null)
                 throw new ArgumentNullException(nameof(idInNRF));
-            if (idInNRF.Id == Guid.Empty)
-                await _context.IDinNRF.AddAsync(idInNRF);
-            else
-                _context.IDinNRF.Update(idInNRF);
+            var nfIdInNRF = GetNF_IDinNRF();
+            
+             if (nfIdInNRF.Id != Guid.Empty && idInNRF.Id != Guid.Empty)
+              {
+                 _context.IDinNRF.Remove(nfIdInNRF);
+                 await _context.IDinNRF.AddAsync(idInNRF);
+              }
+                 
             await _context.SaveChangesAsync();
             return idInNRF.Id ?? Guid.Empty;
         }

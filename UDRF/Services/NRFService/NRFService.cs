@@ -50,7 +50,7 @@ namespace UDRF.Services.NRFService
         }
         public IncomeNFDto ConformNFDto()
         {
-            var nfId = _idNRFService.GetNF_IDinNRF();
+            var nfId = _idNRFService.GetNF_IDinNRF().Id;
             var nfName = StaticConfigurationManager.AppSetting["PublicNRF:Name"];
             var nfVersion = StaticConfigurationManager.AppSetting["PublicNRF:Version"];
             var nfBusyIndex = StaticConfigurationManager.AppSetting["PublicNRF:BusyIndex"];

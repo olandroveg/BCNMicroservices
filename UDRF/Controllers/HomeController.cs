@@ -38,7 +38,7 @@ public class HomeController : Controller
         var token = await GetToken();
         var incomeNF = _nRFService.ConformNFDto();
         var nfId = await _nRFService.RegisterNF(token, incomeNF);
-        nfId = await _idNRFService.AddOrUpdate(new IDinNRF
+        await _idNRFService.AddOrUpdate(new IDinNRF
         {
             Id = nfId
         });
