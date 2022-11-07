@@ -1,8 +1,6 @@
-﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+﻿<Properties StartupConfiguration="{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}|Default">
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
     <Files>
       <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" Line="52" Column="10" />
