@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
     <Files>
       <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" Line="52" Column="10" />
       <File FileName="UDRF/Controllers/HomeController.cs" Line="39" Column="51" />
       <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="50" Column="10" />
-      <File FileName="UDRF/appsettings.json" Line="19" Column="18" />
+      <File FileName="UDRF/appsettings.json" Line="25" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -34,11 +38,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
