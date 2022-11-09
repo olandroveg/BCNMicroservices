@@ -1,13 +1,8 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Services/IdNRFService/IIdNRFService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Controllers/HomeController.cs">
     <Files>
       <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" Line="33" Column="10" />
-      <File FileName="UDRF/Controllers/HomeController.cs" Line="51" Column="10" />
+      <File FileName="UDRF/Controllers/HomeController.cs" Line="40" Column="10" />
       <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="13" Column="33" />
       <File FileName="UDRF/appsettings.json" Line="35" Column="16" />
       <File FileName="UDRF/Models/NFmapping.cs" Line="8" Column="44" />
@@ -16,7 +11,7 @@
       <File FileName="UDRF/Models/IDinNRF.cs" Line="4" Column="5" />
       <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="142" Column="40" />
       <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="58" Column="13" />
-      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" Line="8" Column="56" />
+      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" Line="9" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,9 +26,7 @@
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True">
-                <Node name="IdNRFService" expanded="True">
-                  <Node name="IIdNRFService.cs" selected="True" />
-                </Node>
+                <Node name="IdNRFService" expanded="True" />
                 <Node name="NRFService" expanded="True" />
                 <Node name="TokenService" expanded="True" />
               </Node>
@@ -47,7 +40,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
