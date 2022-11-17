@@ -1,23 +1,30 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
     <Files>
-      <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" Line="33" Column="10" />
-      <File FileName="UDRF/Controllers/HomeController.cs" Line="40" Column="10" />
-      <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="13" Column="33" />
-      <File FileName="UDRF/appsettings.json" Line="35" Column="16" />
-      <File FileName="UDRF/Models/NFmapping.cs" Line="8" Column="44" />
-      <File FileName="UDRF/Models/APImapping.cs" Line="12" Column="1" />
-      <File FileName="UDRF/Migrations/20221107183049_AddFieldDateTbleNFMapp.cs" Line="15" Column="37" />
-      <File FileName="UDRF/Models/IDinNRF.cs" Line="4" Column="5" />
-      <File FileName="UDRF/Data/EntittiesConfiguration.cs" Line="142" Column="40" />
-      <File FileName="UDRF/Data/ApplicationDbContext.cs" Line="58" Column="13" />
-      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" Line="9" Column="6" />
+      <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Controllers/HomeController.cs" Line="39" Column="12" />
+      <File FileName="UDRF/Services/NRFService/NRFService.cs" Line="22" Column="79" />
+      <File FileName="UDRF/Area/Api/ContentController.cs" Line="50" Column="46" />
+      <File FileName="UDRF/appsettings.json" Line="49" Column="7" />
+      <File FileName="UDRF/Models/NFmapping.cs" Line="1" Column="1" />
+      <File FileName="UDRF/Models/APImapping.cs" />
+      <File FileName="UDRF/Migrations/20221107183049_AddFieldDateTbleNFMapp.cs" />
+      <File FileName="UDRF/Models/IDinNRF.cs" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" />
+      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" />
+      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
             <Node name="UDRF" expanded="True">
+              <Node name="Area" expanded="True">
+                <Node name="Api" expanded="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Dto" expanded="True">
@@ -27,7 +34,9 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True">
                 <Node name="IdNRFService" expanded="True" />
-                <Node name="NRFService" expanded="True" />
+                <Node name="NRFService" expanded="True">
+                  <Node name="NRFService.cs" selected="True" />
+                </Node>
                 <Node name="TokenService" expanded="True" />
               </Node>
               <Node name="Utility" expanded="True" />
@@ -35,17 +44,12 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
