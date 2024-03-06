@@ -1,23 +1,59 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using OF.Models;
+using OF.Services.IdNRFService;
+using OF.Services.NRFService;
+using OF.Services.TokenService;
+using OF.Utility;
 
 namespace OF.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ITokenRequestService _tokenService;
+    private readonly INRFService _nRFService;
+    private readonly IIdNRFService _idNRFService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, ITokenRequestService tokenService,
+        INRFService nRFService, IIdNRFService idNRFService)
     {
         _logger = logger;
+        _tokenService = tokenService;
+        _nRFService = nRFService;
+        _idNRFService = idNRFService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
+
+        try
+        {
+            var token = await GetToken();
+            var incomeNF = _nRFService.ConformNFDto();
+            var nfId = await _nRFService.RegisterNF(token, incomeNF);
+
+            await _idNRFService.AddOrUpdate(new IDinNRF
+            {
+                Id = nfId
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
         return View();
     }
-
+    private async Task<string> GetToken()
+    {
+        var tokenValue = "";
+        var bcnUsername = StaticConfigurationManager.AppSetting["AccessUsers:user"];
+        var bcnPassword = StaticConfigurationManager.AppSetting["AccessUsers:pass"];
+        if (bcnUsername != "" && bcnPassword != "")
+            tokenValue = await _tokenService.ManageToken(bcnUsername, bcnPassword);
+        return tokenValue;
+    }
     public IActionResult Privacy()
     {
         return View();

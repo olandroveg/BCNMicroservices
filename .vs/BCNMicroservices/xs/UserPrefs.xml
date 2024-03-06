@@ -1,32 +1,32 @@
 ﻿<Properties StartupConfiguration="{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}|Default">
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
+      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenRequestService.cs" relfile="OF/Services/TokenService/TokenRequestService.cs" line="65" column="1" />
+      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenRequestService.cs" relfile="OF/Services/TokenService/TokenRequestService.cs" line="68" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Utility/StaticConfigurationManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Services/TokenService/TokenEntityService.cs">
     <Files>
-      <File FileName="UDRF/Utility/StaticConfigurationManager.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="UDRF/appsettings.json" Line="44" Column="7" />
-      <File FileName="OF/appsettings.json" Line="20" Column="15" />
-      <File FileName="OF/Utility/StaticConfigurationManager.cs" Line="7" Column="1" />
-      <File FileName="OF/Program.cs" Line="1" Column="1" />
+      <File FileName="OF/Controllers/HomeController.cs" Line="34" Column="1" />
+      <File FileName="OF/Services/NRFService/NRFService.cs" Line="29" Column="1" />
+      <File FileName="OF/Services/IdNRFService/IdNRFService.cs" Line="33" Column="1" />
+      <File FileName="OF/Services/TokenService/TokenEntityService.cs" Line="50" Column="1" />
+      <File FileName="OF/Services/TokenService/TokenRequestService.cs" Line="65" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BCNMicroservices" expanded="True">
+          <Node name="BCNMicroservices">
             <Node name="OF">
-              <Node name="Utility" expanded="True">
-                <Node name="StaticConfigurationManager.cs" selected="True" />
+              <Node name="Adapters">
+                <Node name="LocationAdapter" expanded="True" />
               </Node>
-            </Node>
-            <Node name="UDRF" expanded="True">
-              <Node name="Data" expanded="True" />
-              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -24,11 +24,29 @@
     <None Remove="Data\" />
     <None Remove="Area\" />
     <None Remove="Area\Api\" />
+    <None Remove="Services\" />
+    <None Remove="Services\TokenService\" />
+    <None Remove="Services\NRFService\" />
+    <None Remove="Dto\" />
+    <None Remove="Dto\NRFDto\" />
+    <None Remove="Adapters\" />
+    <None Remove="Adapters\LocationAdapter\" />
+    <None Remove="Dto\LocationDto\" />
+    <None Remove="Services\IdNRFService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utility\" />
     <Folder Include="Data\" />
     <Folder Include="Area\" />
     <Folder Include="Area\Api\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\TokenService\" />
+    <Folder Include="Services\NRFService\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Dto\NRFDto\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Adapters\LocationAdapter\" />
+    <Folder Include="Dto\LocationDto\" />
+    <Folder Include="Services\IdNRFService\" />
   </ItemGroup>
 </Project>
