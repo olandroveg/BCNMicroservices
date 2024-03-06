@@ -1,34 +1,32 @@
 ﻿<Properties StartupConfiguration="{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.OF FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Utility/StaticConfigurationManager.cs">
     <Files>
-      <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" />
-      <File FileName="UDRF/Controllers/HomeController.cs" />
-      <File FileName="UDRF/Services/NRFService/NRFService.cs" />
-      <File FileName="UDRF/Area/Api/ContentController.cs" />
-      <File FileName="UDRF/appsettings.json" Line="39" Column="26" />
-      <File FileName="UDRF/Models/NFmapping.cs" />
-      <File FileName="UDRF/Models/APImapping.cs" />
-      <File FileName="UDRF/Migrations/20221107183049_AddFieldDateTbleNFMapp.cs" />
-      <File FileName="UDRF/Models/IDinNRF.cs" />
-      <File FileName="UDRF/Data/EntittiesConfiguration.cs" />
-      <File FileName="UDRF/Data/ApplicationDbContext.cs" />
-      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" />
-      <File FileName="UDRF/Area/Api/BcNodeController.cs" />
+      <File FileName="UDRF/Utility/StaticConfigurationManager.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="UDRF/appsettings.json" Line="44" Column="7" />
+      <File FileName="OF/appsettings.json" Line="20" Column="15" />
+      <File FileName="OF/Utility/StaticConfigurationManager.cs" Line="7" Column="1" />
+      <File FileName="OF/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="UDRF" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="IdNRFService" expanded="True" />
+            <Node name="OF">
+              <Node name="Utility" expanded="True">
+                <Node name="StaticConfigurationManager.cs" selected="True" />
               </Node>
+            </Node>
+            <Node name="UDRF" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -19,4 +19,16 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.9" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Utility\" />
+    <None Remove="Data\" />
+    <None Remove="Area\" />
+    <None Remove="Area\Api\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utility\" />
+    <Folder Include="Data\" />
+    <Folder Include="Area\" />
+    <Folder Include="Area\Api\" />
+  </ItemGroup>
 </Project>
