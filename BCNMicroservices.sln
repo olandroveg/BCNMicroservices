@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AANF", "AANF\AANF.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDRF", "UDRF\UDRF.csproj", "{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OF", "OF\OF.csproj", "{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E1EC7D7-D46B-406C-AFF4-7D0F12015429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
