@@ -23,7 +23,7 @@ else
 // Add services to the container.
 builder.Services.UseInjection();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql("server = localhost; port = 3306; database = MicrosUDRF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30"))));
+    options.UseMySql("server = localhost; port = 3306; database = OF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30"))));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 

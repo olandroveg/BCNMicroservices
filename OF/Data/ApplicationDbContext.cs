@@ -48,9 +48,9 @@ namespace OF.Data
                 var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
                 //string connectionString;
                 if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-                    optionsBuilder.UseMySql("server = localhost; port = 3306; database = BcnPortal; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
+                    optionsBuilder.UseMySql("server = localhost; port = 3306; database = OF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
                 else
-                    optionsBuilder.UseMySql("server = 192.168.0.18; port = 3306; database = BcnPortal; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
+                    optionsBuilder.UseMySql("server = 192.168.0.18; port = 3306; database = OF; user = root; password = Cardinals25", new MySqlServerVersion(new Version("8.0.30")));
 
                 //if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
                 //    connectionString = Configuration.GetConnectionString("DefaultConnection");
