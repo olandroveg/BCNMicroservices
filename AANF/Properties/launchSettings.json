@@ -11,11 +11,10 @@
     "AANF": {
       "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "http://localhost:5224",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:5224",
-      "dotnetRunMessages": true
+      }
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -28,7 +27,7 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
+      "environmentVariables": {}
     }
   }
 }

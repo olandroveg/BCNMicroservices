@@ -33,6 +33,10 @@ namespace UDRF.Data
         public virtual DbSet<InterfaceBcNodesCoreBcNode> InterfaceBcNodesCoreBcNodes { get; set; }
         public virtual DbSet<Place> Place { get; set; }
         public virtual DbSet<ContentServices> ContentServices { get; set; }
+        public virtual DbSet<APImapping> APImapping { get; set; }
+        public virtual DbSet<NFmapping> NFmapping { get; set; }
+        public virtual DbSet<Token> Token { get; set; }
+        public virtual DbSet<IDinNRF> IDinNRF { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -48,6 +52,10 @@ namespace UDRF.Data
             builder.ApplyConfiguration(new PlaceConfiguration());
             builder.ApplyConfiguration(new RepeatScheduleConfiguration());
             builder.ApplyConfiguration(new TimeScheduleConfiguration());
+            builder.ApplyConfiguration(new APImappingConfiguration());
+            builder.ApplyConfiguration(new NFmappingConfiguration());
+            builder.ApplyConfiguration(new TokenConfiguration());
+            builder.ApplyConfiguration(new IDinNRFConfiguration());
         }
         public DatabaseFacade GetDatabase()
         {

@@ -1,39 +1,40 @@
 ﻿<Properties StartupConfiguration="{4FBE3DB4-EE9F-4C88-AAF6-D9A75D4D2DC5}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/appsettings.json">
     <Files>
-      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="239" Column="6" />
-      <File FileName="UDRF/Area/Api/LocationController.cs" Line="86" Column="10" />
-      <File FileName="UDRF/Services/BcNodeService/BcNodeService.cs" Line="1" Column="1" />
-      <File FileName="UDRF/Services/LocationService/LocationService.cs" Line="23" Column="62" />
-      <File FileName="UDRF/Models/Place.cs" Line="4" Column="18" />
-      <File FileName="UDRF/Area/Api/ContentController.cs" Line="74" Column="16" />
-      <File FileName="UDRF/Services/LocationService/ILocationService.cs" Line="1" Column="1" />
-      <File FileName="UDRF/Program.cs" Line="1" Column="1" />
-      <File FileName="UDRF/Controllers/HomeController.cs" Line="18" Column="9" />
-      <File FileName="UDRF/appsettings.json" Line="17" Column="1" />
+      <File FileName="UDRF/Services/IdNRFService/IdNRFService.cs" />
+      <File FileName="UDRF/Controllers/HomeController.cs" />
+      <File FileName="UDRF/Services/NRFService/NRFService.cs" />
+      <File FileName="UDRF/Area/Api/ContentController.cs" />
+      <File FileName="UDRF/appsettings.json" Line="39" Column="26" />
+      <File FileName="UDRF/Models/NFmapping.cs" />
+      <File FileName="UDRF/Models/APImapping.cs" />
+      <File FileName="UDRF/Migrations/20221107183049_AddFieldDateTbleNFMapp.cs" />
+      <File FileName="UDRF/Models/IDinNRF.cs" />
+      <File FileName="UDRF/Data/EntittiesConfiguration.cs" />
+      <File FileName="UDRF/Data/ApplicationDbContext.cs" />
+      <File FileName="UDRF/Services/IdNRFService/IIdNRFService.cs" />
+      <File FileName="UDRF/Area/Api/BcNodeController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
             <Node name="UDRF" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
+              <Node name="Services" expanded="True">
+                <Node name="IdNRFService" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

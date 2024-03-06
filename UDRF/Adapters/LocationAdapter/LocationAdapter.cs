@@ -1,4 +1,5 @@
 ﻿using UDRF.Dto.LocationDto;
+using UDRF.Dto.NRFDto;
 using UDRF.Models;
 using UDRF.Services.LocationService;
 
@@ -53,6 +54,15 @@ namespace UDRF.Adapters.LocationAdapter
                 Location = x.Location,
                 Id = x.Id
             });
+        }
+        public IncomeLocationDto ConvertToIncomeLocationDto (Place location)
+        {
+            return new IncomeLocationDto
+            {
+                Name = location.Location,
+                Latitude = double.Parse(location.Latitude),
+                Longitude = double.Parse(location.Longitude)
+            };
         }
     }
 }

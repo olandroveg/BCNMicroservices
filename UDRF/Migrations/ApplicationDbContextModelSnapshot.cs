@@ -211,6 +211,30 @@ namespace UDRF.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("UDRF.Models.APImapping", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("NFId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("ServiceApi")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ServiceName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NFId");
+
+                    b.ToTable("APImapping", (string)null);
+                });
+
             modelBuilder.Entity("UDRF.Models.BcNode", b =>
                 {
                     b.Property<Guid>("Id")
@@ -252,7 +276,7 @@ namespace UDRF.Migrations
 
                     b.HasIndex("PlaceId");
 
-                    b.ToTable("BcNode");
+                    b.ToTable("BcNode", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.BcNodeContent", b =>
@@ -279,7 +303,7 @@ namespace UDRF.Migrations
 
                     b.HasIndex("ContentId");
 
-                    b.ToTable("BcNodeContent");
+                    b.ToTable("BcNodeContent", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.Content", b =>
@@ -303,7 +327,7 @@ namespace UDRF.Migrations
 
                     b.HasIndex("ServicesId");
 
-                    b.ToTable("Content");
+                    b.ToTable("Content", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.ContentServices", b =>
@@ -321,7 +345,18 @@ namespace UDRF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContentServices");
+                    b.ToTable("ContentServices", (string)null);
+                });
+
+            modelBuilder.Entity("UDRF.Models.IDinNRF", b =>
+                {
+                    b.Property<Guid?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("IDinNRF", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.InterfaceBcNode", b =>
@@ -336,16 +371,13 @@ namespace UDRF.Migrations
                     b.Property<Guid>("InterfaceId")
                         .HasColumnType("char(36)");
 
-                    b.Property<Guid>("InterfacesId")
-                        .HasColumnType("char(36)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("BcNodeId");
 
-                    b.HasIndex("InterfacesId");
+                    b.HasIndex("InterfaceId");
 
-                    b.ToTable("InterfaceBcNode");
+                    b.ToTable("InterfaceBcNode", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.InterfaceBcNodesCoreBcNode", b =>
@@ -366,7 +398,7 @@ namespace UDRF.Migrations
 
                     b.HasIndex("InterfBcNodeCoreId");
 
-                    b.ToTable("InterfaceBcNodesCoreBcNodes");
+                    b.ToTable("InterfaceBcNodesCoreBcNode", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.Interfaces", b =>
@@ -381,7 +413,7 @@ namespace UDRF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Interfaces");
+                    b.ToTable("Interfaces", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.InterfBcNodeCore", b =>
@@ -396,7 +428,35 @@ namespace UDRF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("InterfBcNodeCores");
+                    b.ToTable("InterfBcNodeCore", (string)null);
+                });
+
+            modelBuilder.Entity("UDRF.Models.NFmapping", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<bool>("Available")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("NF")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Priority")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NFmapping", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.Place", b =>
@@ -427,7 +487,7 @@ namespace UDRF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Place");
+                    b.ToTable("Place", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.RepeatSchedule", b =>
@@ -442,14 +502,11 @@ namespace UDRF.Migrations
                     b.Property<Guid>("TimeSchduleId")
                         .HasColumnType("char(36)");
 
-                    b.Property<Guid>("TimeScheduleId")
-                        .HasColumnType("char(36)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("TimeScheduleId");
+                    b.HasIndex("TimeSchduleId");
 
-                    b.ToTable("RepeatSchedules");
+                    b.ToTable("RepeatSchedule", (string)null);
                 });
 
             modelBuilder.Entity("UDRF.Models.TimeSchedule", b =>
@@ -475,7 +532,24 @@ namespace UDRF.Migrations
 
                     b.HasIndex("BcNodeContentId");
 
-                    b.ToTable("TimeSchedules");
+                    b.ToTable("TimeSchedule", (string)null);
+                });
+
+            modelBuilder.Entity("UDRF.Models.Token", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Token", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -527,6 +601,17 @@ namespace UDRF.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("UDRF.Models.APImapping", b =>
+                {
+                    b.HasOne("UDRF.Models.NFmapping", "NF")
+                        .WithMany("Apis")
+                        .HasForeignKey("NFId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NF");
                 });
 
             modelBuilder.Entity("UDRF.Models.BcNode", b =>
@@ -584,7 +669,7 @@ namespace UDRF.Migrations
 
                     b.HasOne("UDRF.Models.Interfaces", "Interfaces")
                         .WithMany("InterfaceBcNodes")
-                        .HasForeignKey("InterfacesId")
+                        .HasForeignKey("InterfaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -616,7 +701,7 @@ namespace UDRF.Migrations
                 {
                     b.HasOne("UDRF.Models.TimeSchedule", "TimeSchedule")
                         .WithMany("RepeatSchedule")
-                        .HasForeignKey("TimeScheduleId")
+                        .HasForeignKey("TimeSchduleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -668,6 +753,11 @@ namespace UDRF.Migrations
             modelBuilder.Entity("UDRF.Models.InterfBcNodeCore", b =>
                 {
                     b.Navigation("InterfaceBcNodesCoreBcNode");
+                });
+
+            modelBuilder.Entity("UDRF.Models.NFmapping", b =>
+                {
+                    b.Navigation("Apis");
                 });
 
             modelBuilder.Entity("UDRF.Models.Place", b =>
