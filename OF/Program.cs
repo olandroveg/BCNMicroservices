@@ -6,6 +6,10 @@ using System.Text;
 //using UDRF.Data;
 using OF.Utility;
 using OF.Data;
+using Quartz;
+using OF.Services.JobServices;
+
+var _quartzPeriod = StaticConfigurationManager.AppSetting["AdvertStats:jobPeriod"];
 
 var secretKey = StaticConfigurationManager.AppSetting["TokenSecret:Key"];
 var secretIssuer = StaticConfigurationManager.AppSetting["TokenSecret:Issuer"];
@@ -47,6 +51,30 @@ builder.Services.AddAuthentication()
 
                 };
             });
+
+builder.Services.AddQuartz(q =>
+{
+    // Use a Scoped container to create jobs. I'll touch on this later
+    //q.UseMicrosoftDependencyInjectionScopedJobFactory(); deprecated in this quartz version...
+    q.UseMicrosoftDependencyInjectionJobFactory();
+    // Create a "key" for the job
+    var jobKey = new JobKey("MetricJob1");
+
+    // Register the job with the DI container
+    q.AddJob<AdvertisMetricJob>(opts => opts.WithIdentity(jobKey));
+
+    // Create a trigger for the job
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey) // link to the HelloWorldJob
+        .WithIdentity("MetricJob-trigger") // give the trigger a unique name
+        .WithCronSchedule(_quartzPeriod)); // run every 48 seconds See https://www.freeformatter.com/cron-expression-generator-quartz.html
+                                           //.WithCronSchedule("0 0/1 * ? * * *")); // run every 1 minute
+                                           //.WithCronSchedule("15 0/1 * ? * * *")); // run every 1 minute and 15 secs // the page above has the minutes in bad format. Take int into account
+
+});
+
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
