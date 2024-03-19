@@ -1,17 +1,32 @@
 ﻿<Properties StartupConfiguration="{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}|Default">
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Services/TokenService/TokenEntityService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Area/Api/BvnoController.cs">
     <Files>
-      <File FileName="OF/Controllers/HomeController.cs" />
-      <File FileName="OF/Services/NRFService/NRFService.cs" />
-      <File FileName="OF/Services/IdNRFService/IdNRFService.cs" />
-      <File FileName="OF/Services/TokenService/TokenEntityService.cs" Line="11" Column="10" />
-      <File FileName="OF/Services/TokenService/TokenRequestService.cs" />
+      <File FileName="UDRF/Area/Api/ContentController.cs" Line="77" Column="73" />
+      <File FileName="OF/Area/Api/BvnoController.cs" Line="38" Column="35" />
+      <File FileName="OF/Dto/Bvno/BvnoDto.cs" Line="28" Column="15" />
+      <File FileName="OF/Dto/Bvno/IngestionRsponse.cs" Line="14" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BCNMicroservices" expanded="True" />
+          <Node name="BCNMicroservices" expanded="True">
+            <Node name="OF" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Dto" expanded="True">
+                <Node name="Bvno" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UDRF" expanded="True">
+              <Node name="Dto" expanded="True">
+                <Node name="ContentDto" expanded="True" />
+                <Node name="NRFDto" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="TokenService" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -22,8 +37,8 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
-    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenRequestService.cs" relfile="OF/Services/TokenService/TokenRequestService.cs" line="65" column="1" />
-    <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenRequestService.cs" relfile="OF/Services/TokenService/TokenRequestService.cs" line="68" column="1" />
+    <BreakpointStore>
+      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

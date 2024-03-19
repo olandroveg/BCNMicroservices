@@ -10,6 +10,7 @@ namespace OF.Dto.Bvno
         public IngestionMode ingestionMode { get; set; }
         public string SchedduleTime { get; set; }
         public IEnumerable<string> ChannelList { get; set; }
+		public bool isAudiovisual { get; set; }
         public string Resolution { get; set; }
     }
 }

@@ -42,7 +42,8 @@ namespace OF.Area.Api
                     isScheddule = false
                 },
                 ChannelList = new List<string> { "Channel1", "Channel3" },
-                isAudiovisual = false
+                isAudiovisual = true,
+                Resolution = "640x480"
 
             };
         }
