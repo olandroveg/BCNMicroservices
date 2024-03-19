@@ -35,6 +35,7 @@
     <None Remove="Adapters\LocationAdapter\" />
     <None Remove="Dto\LocationDto\" />
     <None Remove="Services\IdNRFService\" />
+    <None Remove="Dto\Bvno\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="RequestApi\" />
@@ -50,5 +51,6 @@
     <Folder Include="Adapters\LocationAdapter\" />
     <Folder Include="Dto\LocationDto\" />
     <Folder Include="Services\IdNRFService\" />
+    <Folder Include="Dto\Bvno\" />
   </ItemGroup>
 </Project>

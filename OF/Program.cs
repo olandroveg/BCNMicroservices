@@ -9,10 +9,15 @@ using OF.Data;
 using Quartz;
 using OF.Services.JobServices;
 
-var _quartzPeriod = StaticConfigurationManager.AppSetting["AdvertStats:jobPeriod"];
+
 
 var secretKey = StaticConfigurationManager.AppSetting["TokenSecret:Key"];
 var secretIssuer = StaticConfigurationManager.AppSetting["TokenSecret:Issuer"];
+var _quartzPeriod = StaticConfigurationManager.AppSetting["AdvertStats:jobPeriod"];
+
+//var secretKey = "we_are_champions";
+//var secretIssuer = "bilbao_BCN";
+//var _quartzPeriod = "0/48 * * * * ?"; // currently 48 secs. "0 0/1 * ? * * *" for 1 sec, "15 0/1 * ? * * *" for 1 min 15sec
 
 var builder = WebApplication.CreateBuilder(args);
 
