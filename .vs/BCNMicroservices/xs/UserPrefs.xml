@@ -1,23 +1,33 @@
 ﻿<Properties StartupConfiguration="{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="OF/Area/Api/BvnoController.cs">
     <Files>
-      <File FileName="UDRF/Area/Api/ContentController.cs" Line="77" Column="73" />
+      <File FileName="UDRF/Area/Api/ContentController.cs" />
       <File FileName="OF/Area/Api/BvnoController.cs" Line="38" Column="35" />
-      <File FileName="OF/Dto/Bvno/BvnoDto.cs" Line="28" Column="15" />
-      <File FileName="OF/Dto/Bvno/IngestionRsponse.cs" Line="14" Column="47" />
+      <File FileName="OF/Dto/Bvno/BvnoDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="OF" selected="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Dto" expanded="True">
-                <Node name="Bvno" expanded="True" />
+            <Node name="OF" expanded="True">
+              <Node name="Area" expanded="True">
+                <Node name="Api" expanded="True">
+                  <Node name="BvnoController.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
             <Node name="UDRF" expanded="True">
+              <Node name="Area" expanded="True">
+                <Node name="Api" expanded="True" />
+              </Node>
               <Node name="Dto" expanded="True">
                 <Node name="ContentDto" expanded="True" />
                 <Node name="NRFDto" expanded="True" />
@@ -31,14 +41,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
