@@ -1,4 +1,4 @@
-This BCN Microservices project is part of the developing architecture "DTT Broadcast Core Network". In this version this project consists of 3 microservices or Network Function NF.
+This BCN Microservices project is part of the developing architecture "ATSC 3.0 Broadcast Core Network". In this version this project consists of 3 microservices or Network Function NF.
 
 AANF: Access and Authorization Network Function. It will authorise access to Broadcast Core Network users (operators, DTT transmitter operators...).
 It will provide access by user roles, Outh 2.0 token between each of the NF of the architecture.
