@@ -18,4 +18,7 @@ Some of the above NF are configured to use MySql DB.
 
 Developer: Orlando Landrove
 
-ASP.NetCore C# project
+ASP.NetCore C# project.
+
+DOI
+10.5281/zenodo.10864109
