@@ -10,9 +10,9 @@ UDRF: User Data Repository Function. It will store the data and profiles of the 
 UDRF will store most of the information of the BCN, and will be queried by most of the other NFs.
 NWDAF: 
 
-BCN Portal. Please contact: https://github.com/olandroveg/BCNPortal
+BCN Portal. Please refer to: https://github.com/olandroveg/BCNPortal
 
-Core NRF: Please contact: https://github.com/olandroveg/CoreNRF
+Core NRF: Please refer to: https://github.com/olandroveg/CoreNRF
 
 Some of the above NF are configured to use MySql DB.
 
