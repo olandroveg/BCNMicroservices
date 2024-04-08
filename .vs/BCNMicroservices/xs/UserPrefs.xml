@@ -1,43 +1,42 @@
 ﻿<Properties StartupConfiguration="{AAA8837C-04C1-4ADB-B77F-3DE5DE792E7F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UDRF/Area/Api/BcNodeController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OF/Services/JobServices/AdvertisMetricJob.cs">
     <Files>
-      <File FileName="UDRF/Area/Api/ContentController.cs" />
-      <File FileName="OF/Area/Api/BvnoController.cs" Line="38" Column="35" />
-      <File FileName="OF/Dto/Bvno/BvnoDto.cs" />
-      <File FileName="UDRF/Area/Api/BcNodeController.cs" Line="1" Column="1" />
+      <File FileName="NWDAF/RequestApi/SendAdvCategOF.cs" Line="7" Column="27" />
+      <File FileName="NWDAF/appsettings.json" Line="13" Column="35" />
+      <File FileName="OF/Area/Api/NwdafController.cs" Line="10" Column="6" />
+      <File FileName="OF/Services/JobServices/AdvertisMetricJob.cs" Line="9" Column="17" />
+      <File FileName="OF/RequestApi/SendCategory.cs" Line="52" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCNMicroservices" expanded="True">
-            <Node name="UDRF" expanded="True">
+            <Node name="NWDAF" selected="True" />
+            <Node name="OF">
               <Node name="Area" expanded="True">
-                <Node name="Api" expanded="True">
-                  <Node name="BcNodeController.cs" selected="True" />
-                </Node>
+                <Node name="Api" expanded="True" />
               </Node>
-              <Node name="Dto" expanded="True">
-                <Node name="ContentDto" expanded="True" />
-                <Node name="NRFDto" expanded="True" />
-              </Node>
+              <Node name="RequestApi" expanded="True" />
               <Node name="Services" expanded="True">
-                <Node name="TokenService" expanded="True" />
+                <Node name="JobServices" expanded="True" />
               </Node>
+              <Node name="Utility" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.NWDAF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/subzero/Projects/BCNMicroservices/OF/Services/TokenService/TokenEntityService.cs" relfile="OF/Services/TokenService/TokenEntityService.cs" line="16" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.UDRF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.AANF PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.OF PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

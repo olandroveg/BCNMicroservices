@@ -1,6 +1,11 @@
+using NWDAF.Utility;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//builder.Services.UseInjection();
+
+builder.Services.UseInjection();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -27,7 +32,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
-    endpoints.MapRazorPages();
+    //endpoints.MapRazorPages();
 });
 
 app.Run();

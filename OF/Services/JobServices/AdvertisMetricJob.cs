@@ -7,6 +7,7 @@ using OF.Utility;
 using System.IO;
 using System.Linq;
 using OF.Models;
+using OF.RequestApi;
 
 namespace OF.Services.JobServices
 {
@@ -62,7 +63,8 @@ namespace OF.Services.JobServices
             }
             if (_sendCategoryOrNot == "on")
             {
-                var category = AnalyzeStats();
+                //var category = AnalyzeStats();
+                var category = await new SendCategory().ReqstCategory();
                 try
                 {
                     await SendByAPI(category);
