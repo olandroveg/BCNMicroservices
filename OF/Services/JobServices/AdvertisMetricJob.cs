@@ -23,13 +23,13 @@ namespace OF.Services.JobServices
         private string _categories = StaticConfigurationManager.AppSetting["AdvertStats:defineCategory"];
 
         //  Ordenador My Desktop TSR
-        //private string _StatsDirectory = @"C:\Users\1094545\Documents\Trabajo\StatisticUser\";
-        //private string _StatsAdvertising = @"C:\Users\1094545\Documents\Trabajo\StatisticAdvertsing\";
+        private string _StatsDirectory = @"C:\Users\1094545\Documents\Trabajo\StatisticUser\";
+        private string _StatsAdvertising = @"C:\Users\1094545\Documents\Trabajo\StatisticAdvertsing\";
 
 
         //  Ordenador DEMO TSR
-        private string _StatsDirectory = @"C:\Users\Admin\Documents\Orlando\StatisticUser\";
-        private string _StatsAdvertising = @"C:\Users\Admin\Documents\Orlando\StatisticAdvertsing\";
+        //private string _StatsDirectory = @"C:\Users\Admin\Documents\Orlando\StatisticUser\";
+        //private string _StatsAdvertising = @"C:\Users\Admin\Documents\Orlando\StatisticAdvertsing\";
 
         //// My laptop windows
         ////private string _StatsDirectory = @"C:\Users\1094545\source\repos\Core\CoreNetwork\StatisticUser";
