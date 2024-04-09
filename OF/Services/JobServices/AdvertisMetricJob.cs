@@ -59,7 +59,7 @@ namespace OF.Services.JobServices
                 if (_directCategory == "off")
                     GenerateStatics();
                 else
-                    await SendByAPI(_directCategory);
+                    await SendDirectCateg(_directCategory);
             }
             if (_sendCategoryOrNot == "on")
             {
@@ -67,7 +67,7 @@ namespace OF.Services.JobServices
                 var category = await new SendCategory().ReqstCategory();
                 try
                 {
-                    await SendByAPI(category);
+                    await RqstCategoryByAPI();
                 }
                 catch (Exception ex)
                 {
@@ -256,9 +256,15 @@ namespace OF.Services.JobServices
         //    var configRequest = await new SendRasberryVideoCat().SendConfig(category);
         //    return configRequest;
         //}
-        public async Task<string> SendByAPI(string incom)
+        public async Task<string> RqstCategoryByAPI()
         {
-            return "test";
+            var configRequest = await new SendCategory().ReqstCategory();
+            return configRequest;
+        }
+        private async Task<string> SendDirectCateg(string directCategory)
+        {
+            var configRequest = await new SendCategory().SendConfig(directCategory);
+            return configRequest;
         }
 
     }

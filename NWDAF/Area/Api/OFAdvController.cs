@@ -42,7 +42,7 @@ namespace NWDAF.Area.Api
              ParalProcess();
             _logger.LogInformation("Response to OF");
             // In the following reponse there's not the category result. Instead, the analysis will be done by paralel process and after this finish the category will be sent to OF different API message
-            return Ok();
+            return Ok("Success");
         }
 
         //el metod de abajo ParalProcess() se hizo para probar el paralel Task. Cuando haya que llamar a metods async dentro del cuerpo del Task o dentro del .ContinueWith,
