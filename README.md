@@ -1,4 +1,4 @@
-This BCN Microservices project is part of the developing architecture "ATSC 3.0 Broadcast Core Network". In this version this project consists of 3 microservices or Network Function NF.
+This BCN Microservices project is part of the developing architecture "ATSC 3.0 Broadcast Core Network". In this version this project consists of 6 microservices or Network Function NF.
 
 AANF: Access and Authorization Network Function. It will authorise access to Broadcast Core Network users (operators, DTT transmitter operators...).
 It will provide access by user roles, Outh 2.0 token between each of the NF of the architecture.
@@ -8,7 +8,8 @@ Mainly used in any use case or automated function, OF will know what to do in ea
 
 UDRF: User Data Repository Function. It will store the data and profiles of the transmission nodes, Broadcast Virtual Network Operator (BVNO) locations and System Managers.
 UDRF will store most of the information of the BCN, and will be queried by most of the other NFs.
-NWDAF: 
+
+NWDAF: Network Data Analytics Function will be responsible for analysing data and proposing decisions based on statistical patterns. NWDAF will have continuous communication with the Orchestrator Function.
 
 BCN Portal. Please refer to: https://github.com/olandroveg/BCNPortal
 
